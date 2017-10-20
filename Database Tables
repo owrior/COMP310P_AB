@@ -1,10 +1,10 @@
-CREATE DATABASE Oktober
-USE Oktober
-CREATE TABLE Event (Event_ID, Event_Name, Location_ID, Supplier_ID, Date, Description)
-CREATE TABLE Ticket (Ticket_ID, Customer_ID, Event_ID, TicketType_ID)
-CREATE TABLE Customer (Customer_ID, Last_Name, First_Name, DOB, Phone_Number, Email, Address, Postcode)
-CREATE TABLE Tokens (Token_ID, Customer_ID, TokenType_ID, Amount)
-CREATE TABLE TicketType (TicketType_ID, Name, Description)
-CREATE TABLE Location (Location_ID, Name, Address, Postcode)
-CREATE TABLE TokenType (TokenType_ID, Name, Description)
-CREATE TABLE Supplier (Supplier_ID, Name, Supplier_Type, Email, Phone_Number, Address, Postcode)
+CREATE DATABASE Oktober;
+USE Oktober;
+CREATE TABLE Event (Event_ID, Event_Name, Location_ID, Supplier_ID, Date, Description);
+CREATE TABLE Ticket (Ticket_ID, Customer_ID, Event_ID, TicketType_ID);
+CREATE TABLE Customer (Customer_ID, Last_Name, First_Name, DOB, Phone_Number, Email, Address, Postcode);
+CREATE TABLE Tokens (Token_ID, Customer_ID, TokenType_ID, Amount);
+CREATE TABLE TicketType (TicketType_ID, Name, Description);
+CREATE TABLE Location (Location_ID, Name, Address, Postcode);
+CREATE TABLE TokenType (TokenType_ID, Name, Description);
+CREATE TABLE Supplier (Supplier_ID, Name, Supplier_Type, Email, Phone_Number, Address, Postcode);
