@@ -1,0 +1,50 @@
+            body{
+                height: 100%;
+            }
+            ul.login_control{
+                background-color: black;
+                border: 2px aqua;
+            }
+            li.login_control{ 
+                float: right;
+                display: inline;
+                color: #ff0066;
+                padding: 0px 8px 0px 8px;
+            }
+            ul.navigation_control{
+                background-color: #cccc00;
+                border: 2px blue;
+            }
+            li.navigation_control{
+                text-align: center;
+                display: inline;
+                color: #ff0066;
+                padding: 0px 30px 0px 30px;
+            }
+            div.main{
+                float:left;
+                height:100%;
+                width:70%; 
+                background-color: blanchedalmond; 
+                
+            }
+            h1.main{
+                text-align: center;
+            }
+            p.main{
+                text-align: center;
+            }
+            div.sidebar{
+                float:right;
+                height:100%;
+                width:30%; 
+                background-color:red;
+            }
+            h2.sidebar{
+                text-align: right;
+            }
+            li.sidebar{
+                float: right;
+                width: 30%;
+            }
+
