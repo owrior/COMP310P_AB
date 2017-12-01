@@ -113,5 +113,131 @@
                 font-style: normal;
                 
             }
+            /*Sign Up Page*/
+            div.signup_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
             
+            h3.signup_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.signup_page_main{
+                text-align: center;
+                font-style: normal;
+                
+            }
+            /*Log Out Page*/
+            div.logout_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.logout_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.logout_page_main{
+                text-align: center;
+                font-style: normal;                
+            }
+            /*Events Page*/
+            div.events_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.events_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.events_page_main{
+                text-align: center;
+                font-style: normal;  
+            }
+            /*Tokens Page*/
+            div.tokens_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.tokens_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.tokens_page_main{
+                text-align: center;
+                font-style: normal;
+            }
+            /*Feedback Page*/
+            div.feedback_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.feedback_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.feedback_page_main{
+                text-align: center;
+                font-style: normal;              
+            }
+            /*Create Page*/
+            div.create_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.create_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.create_page_main{
+                text-align: center;
+                font-style: normal;                
+            }
+            /*Control Page*/
+            div.control_page_main{
+                text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.control_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.control_page_main{
+                text-align: center;
+                font-style: normal;
+            }
 
