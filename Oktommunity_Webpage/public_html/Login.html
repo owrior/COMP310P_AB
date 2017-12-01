@@ -34,6 +34,12 @@ and open the template in the editor.
         </header>
         <div class='login_page_main'>
         <h3 class="login_page_main">LOGIN</h3>
-        <p> U S E R N A M E <br/> P A S S W O R D </p>
+        <form action="/action_page.php">
+            U S E R N A M E : <input type="text" name="username"><br>
+            P A S S W O R D : <input type="text" name="password"><br>
+            <input type="Submit" value="LOGIN AS HOST">
+            <input type='Submit' value='LOGIN AS PARTICIPANT'>
+        </form>
+        </div>
     </body>
 </html>

@@ -86,7 +86,7 @@
             
             /*Login Page*/
             div.login_page_main{
-                 float:left;
+                text-align: center;
                 height:100%;
                 width:100%; 
                 background-color: red;
