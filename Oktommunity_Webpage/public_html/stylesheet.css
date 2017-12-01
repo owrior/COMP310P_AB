@@ -6,7 +6,7 @@
                 line-height: 1.5;
                 color: white;
             }
-            
+       
             /*Home Page*/
             ul.login_control{
                 list-style-type: none;
@@ -25,7 +25,6 @@
                 display: block;
                 color: white;
                 text-align: center;
-                padding: 0px 30px 0px 30px;
                 text-decoration: none;
             }
             li a.login_control:hover, a.login_control:active{
@@ -39,24 +38,25 @@
                 background-color: #333;
             }
             li.navigation_control{
-                display: inline;
+                display: inline-block;
                 color: white;
-                padding: 0px 50px 0px 50px;
+                padding: 0px 5% 0px 5%;
+
             }
             li a.navigation_control{
-                display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
             }
             div.main{
+                padding: 0px 0px 0px 0px;
                 float:left;
                 height:100%;
                 width:80%; 
                 background-color: blanchedalmond;
             }
             h1.main{
+                padding: 0px 0px 0px 0px;
                 text-align: center;
                 font-style:italic;
                 font-size: 100px;
@@ -90,6 +90,7 @@
                 height:100%;
                 width:100%; 
                 background-color: red;
+                padding: 0px 0px 0px 0px;
               
             }
             
@@ -97,6 +98,7 @@
                 text-align: center;
                 font-style:italic;
                 font-size: 100px;
+                padding: 0px 0px 0px 0px;
             }
             p.login_page_main{
                 text-align: center;
