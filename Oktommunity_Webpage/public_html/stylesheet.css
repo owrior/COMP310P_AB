@@ -7,6 +7,7 @@
                 color: white;
             }
             
+            /*Home Page*/
             ul.login_control{
                 list-style-type: none;
                 margin: 0;
@@ -82,8 +83,25 @@
                 width: 30%;
                 font-style: normal;
             }
-           
-
-
-
+            
+            /*Login Page*/
+            div.login_page_main{
+                 float:left;
+                height:100%;
+                width:100%; 
+                background-color: red;
+              
+            }
+            
+            h3.login_page_main{
+                text-align: center;
+                font-style:italic;
+                font-size: 100px;
+            }
+            p.login_page_main{
+                text-align: center;
+                font-style: normal;
+                
+            }
+            
 
