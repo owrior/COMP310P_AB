@@ -145,7 +145,6 @@
                 background-color: red;
               
             }
-            
             h3.logout_page_main{
                 text-align: center;
                 font-style:italic;
@@ -162,6 +161,9 @@
                 width:100%; 
                 background-color: red;
               
+            }
+            title.events_page_main{
+                text-align: left;
             }
             
             h3.events_page_main{
