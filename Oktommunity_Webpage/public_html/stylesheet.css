@@ -7,7 +7,6 @@
                 color: white;
             }
        
-            /*Home Page*/
             ul.login_control{
                 list-style-type: none;
                 margin: 0;
@@ -15,12 +14,14 @@
                 overflow: hidden;
                 background-color: #333;
             }
+            
             li.login_control{ 
                 float: right;
                 display: inline;
                 color: white;
                 padding: 0px 20px 0px 20px;
             }
+            
             li a.login_control{
                 display: block;
                 color: white;
@@ -28,6 +29,7 @@
                 text-decoration: none;
                 background-color: #333;
             }
+            
             li a:link, a:visited{
                 color: white;
                 text-align: center;
@@ -58,6 +60,7 @@
                 padding: 14px 16px;
                 text-decoration: none;
             }
+            /*Home Page*/
             div.main{
                 padding: 0px 0px 0px 0px;
                 float:left;
