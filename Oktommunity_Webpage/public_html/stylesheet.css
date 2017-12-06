@@ -84,7 +84,8 @@
                 background-color: dimgray;
             }
             h1.main{
-                padding: 0px 0px 0px 0px;
+                padding: 0px;
+                margin: 0;
                 text-align: center;
                 font-style:italic;
                 font-size: 100px;
@@ -118,6 +119,7 @@
                 width:100%; 
                 background-color: dimgray;
                 padding: 0px;
+                margin: 0;
                 float: left;
               
             }
