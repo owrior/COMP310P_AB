@@ -20,6 +20,7 @@
                 display: inline;
                 color: white;
                 padding: 0px 20px 0px 20px;
+                margin: 0;
             }
             
             li a.login_control{
@@ -52,7 +53,8 @@
             li.navigation_control{
                 display: inline-block;
                 color: white;
-                padding: 0px 5% 0px 5%;
+                padding: 0px 4% 0px 4%;
+                margin: 0;
 
             }
             li a.navigation_control{
@@ -158,22 +160,51 @@
             div.events_page_main{
                 text-align: center;
                 height:100%;
-                width:100%; 
+                width:80%; 
                 background-color: red;
-              
+                float: left;            
             }
-            title.events_page_main{
+            h1.events_page_main{
                 text-align: left;
-            }
-            
-            h3.events_page_main{
-                text-align: center;
                 font-style:italic;
                 font-size: 100px;
+                margin: 0;
+                padding: 0;
             }
             p.events_page_main{
                 text-align: center;
                 font-style: normal;  
+            }
+            form.events_page_main{
+                float: left;
+                margin: 5px;
+            }
+            input.events_page_main{
+                padding: 0% 5% 0% 5%;
+            }
+            div.events_page_sidebar_1{
+                text-align: left;
+                height: 50%;
+                width: 19.7%;
+                background-color: dimgray;
+                float: right;
+                border-left: 4px solid black;
+            }
+            h2.events_page_sidebar_1{
+                font-size:30px;
+                font-style: italic;
+            }
+            div.events_page_sidebar_2{
+                text-align: left;
+                height: 50%;
+                width: 19.7%;
+                background-color: dimgray;
+                float: right;
+                border-left: 4px solid black;
+            }
+            h2.events_page_sidebar_2{
+                font-size: 25px;
+                font-style: italic;
             }
             /*Tokens Page*/
             div.tokens_page_main{
@@ -199,6 +230,7 @@
                 height:100%;
                 width:100%; 
                 background-color: red;
+                float: left;
               
             }
             

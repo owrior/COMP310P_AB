@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title class='events_page_main'>WHAT'S ON?</title>
+        <title>Event's</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='stylesheet.css'>
@@ -32,7 +32,25 @@ and open the template in the editor.
             </ul>
         </header>
          <div class='events_page_main'>
-        <h3 class="events_page_main">EVENTS</h3>
+            <h1 class="events_page_main">WHAT'S ON?</h1>
+            <form class='events_page_main'>
+                <input type = 'text' name='event_name'>
+                <input type='date' name='date_from'>
+                <input type='date' name='date_to'>
+                <input type='submit' name='search'>
+            </form>
+        </div>
+        <div class='events_page_sidebar_1'>
+            <h2 class='events_page_sidebar_1'>Event's <br>You're Attending...</h2>
+            <ul>
+                <li>Event 1</li>
+                <li>Event 2</li>
+                <li>Event 3</li>
+                <li>Event 4</li>
+            </ul>
+        </div>
+        <div class="events_page_sidebar_2">
+            <h2 class="events_page_sidebar_2">Give Feedback On Event's You've Attended...</h2>
         </div>
     </body>
 </html>
