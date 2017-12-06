@@ -111,8 +111,9 @@
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: red;
-                padding: 0px 0px 0px 0px;
+                background-color: dimgray;
+                padding: 0px;
+                float: left;
               
             }
             
@@ -132,7 +133,8 @@
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: red;
+                background-color: dimgray;
+                float: left;
               
             }
             
@@ -151,7 +153,8 @@
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: red;
+                background-color: dimgray;
+                float: left;
               
             }
             h3.logout_page_main{
@@ -213,28 +216,24 @@
             }
             /*Tokens Page*/
             div.tokens_page_main{
-                text-align: center;
                 height:100%;
-                width:100%; 
-                background-color: red;
+                width: 100%;
+                background-color: dimgray;
+                float: left;
               
             }
             
-            h3.tokens_page_main{
+            h1.tokens_page_main{
                 text-align: center;
-                font-style:italic;
+                font-style: italic;
                 font-size: 100px;
-            }
-            p.tokens_page_main{
-                text-align: center;
-                font-style: normal;
             }
             /*Feedback Page*/
             div.feedback_page_main{
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: red;
+                background-color: dimgray;
                 float: left;
               
             }
@@ -254,6 +253,7 @@
                 height:100%;
                 width:100%; 
                 background-color: red;
+                float: left;
               
             }
             
@@ -272,6 +272,7 @@
                 height:100%;
                 width:100%; 
                 background-color: red;
+                float: left;
               
             }
             
