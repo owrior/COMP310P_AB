@@ -1,4 +1,5 @@
           
+            /*Overall Page's'*/
             body{
                 height: 1000px;
                 font-family: Arial,sans-serif;
@@ -7,6 +8,21 @@
                 color: white;
                 background: #333;
             }
+            
+            li a:link, a:visited{
+                color: white;
+                text-align: center;
+                padding: 0px 30px 0px 30px;
+                text-decoration: none;
+                background-color: #333; 
+            }
+            
+            li a:hover, a:active{
+                text-decoration: none;
+                background-color: #111;
+            }
+            
+            /*Login Control*/
             
             div.login_control{
                 display: table;
@@ -35,18 +51,7 @@
                 background-color: #333;
             }
             
-            li a:link, a:visited{
-                color: white;
-                text-align: center;
-                padding: 0px 30px 0px 30px;
-                text-decoration: none;
-                background-color: #333; 
-            }
-            
-            li a:hover, a:active{
-                text-decoration:none;
-                background-color: #111;
-            }
+            /*Navigation Control*/
             
             div.navigation_control{
                 display: table;
@@ -72,7 +77,7 @@
             }
             /*Home Page*/
             div.main{
-                padding: 0px 0px 0px 0px;
+                padding: 0px;
                 float:left;
                 height:100%;
                 width:80%; 
@@ -188,9 +193,10 @@
             form.events_page_main{
                 float: left;
                 margin: 5px;
+                padding: 0% 5% 0% 5%;
             }
             input.events_page_main{
-                padding: 0% 5% 0% 5%;
+
             }
             div.events_page_sidebar_1{
                 text-align: left;
@@ -202,6 +208,7 @@
             h2.events_page_sidebar_1{
                 font-size:30px;
                 font-style: italic;
+                margin: 2px;
             }
             div.events_page_sidebar_2{
                 text-align: left;
@@ -213,43 +220,41 @@
             h2.events_page_sidebar_2{
                 font-size: 25px;
                 font-style: italic;
+                margin: 2px;
             }
             /*Tokens Page*/
             div.tokens_page_main{
+                padding: 0px;
                 height:100%;
                 width: 100%;
                 background-color: dimgray;
                 float: left;
               
             }
-            
             h3.tokens_page_main{
                 text-align: center;
                 font-style: italic;
                 font-size: 100px;
             }
+            
             /*Feedback Page*/
             div.feedback_page_main{
-                text-align: center;
                 height:100%;
                 width:100%; 
                 background-color: dimgray;
-                float: left;
-              
+                float: left; 
             }
             
             h3.feedback_page_main{
                 text-align: center;
-                font-style:italic;
+                font-style: italic;
                 font-size: 100px;
             }
-            p.feedback_page_main{
-                text-align: center;
-                font-style: normal;              
-            }
+            
             /*Create Page*/
             div.create_page_main{
-                text-align: center;
+                padding: 0;
+                margin: 0;
                 height:100%;
                 width:100%; 
                 background-color: dimgrey;
@@ -259,10 +264,6 @@
                 text-align: center;
                 font-style:italic;
                 font-size: 100px;
-            }
-            p.create_page_main{
-                text-align: center;
-                font-style: normal;                
             }
             /*Control Page*/
             div.control_page_main{
