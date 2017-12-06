@@ -227,7 +227,8 @@
             /*Tokens Page*/
             div.tokens_page_main{
                 padding: 0px;
-                height:100%;
+                height: 100%;
+                margin: 0;
                 width: 100%;
                 background-color: dimgray;
                 float: left;
@@ -235,23 +236,9 @@
             }
             h3.tokens_page_main{
                 text-align: center;
-                font-style: italic;
-                font-size: 100px;
+                text-size: 100px;
             }
             
-            /*Feedback Page*/
-            div.feedback_page_main{
-                height:100%;
-                width:100%; 
-                background-color: dimgray;
-                float: left; 
-            }
-            
-            h3.feedback_page_main{
-                text-align: center;
-                font-style: italic;
-                font-size: 100px;
-            }
             
             /*Create Page*/
             div.create_page_main{
