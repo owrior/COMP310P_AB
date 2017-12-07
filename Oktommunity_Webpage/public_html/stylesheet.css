@@ -23,32 +23,24 @@
             }
             
             /*Login Control*/
-            
-            div.login_control{
-                display: table;
-                float: right;
-            }
-            ul.login_control{
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
-            
-            li.login_control{ 
-                float: right;
-                display: inline;
+            .login_control_btn {
+                background-color: #4CAF50;
                 color: white;
-                margin: 0;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
             }
-            
-            li a.login_control{
+            div.login_control_dropdown{
+                display: inline-block;
+                position: relative;
+                float: right;
+            }
+            .login_control_btn:hover .login_control {
                 display: block;
-                color: white;
-                text-align: center;
-                text-decoration: none;
-                background-color: #333;
+            }
+            .login_control_dropdown a:hover {
+                background-color: #f1f1f1
             }
             
             /*Navigation Control*/
