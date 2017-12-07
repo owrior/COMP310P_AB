@@ -70,7 +70,7 @@
 
             /* Change the background color of the dropdown button when the dropdown content is shown */
             .login_control_dropdown:hover .login_control_btn {
-                background-color: #3e8e41;
+                background-color: #111;
             }
             
             /*Navigation Control*/
@@ -93,7 +93,9 @@
 
             }
             li a.navigation_control{
+                display: block;
                 color: white;
+                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
             }
@@ -283,6 +285,7 @@
                 width:100%; 
                 background-color: dimgrey;
                 float: left;
+                padding: 0px;
               
             }
             
