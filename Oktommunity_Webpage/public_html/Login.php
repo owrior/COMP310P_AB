@@ -1,4 +1,6 @@
 <?php
+
+connect.connect();
 $login_query = "SELECT Password FROM Customers WHERE Email LIKE "+$email_entered;
 
 $password = query($connection,$login_query);
