@@ -25,7 +25,7 @@
             /*Login Control*/
             /* Style The Dropdown Button */
             .login_control_btn {
-                background-color: #4CAF50;
+                background-color: dimgray;
                 color: white;
                 padding: 16px;
                 font-size: 16px;
@@ -37,6 +37,7 @@
             .login_control_dropdown {
                 position: relative;
                 display: inline-block;
+               
             }
 
             /* Dropdown Content (Hidden by Default) */
