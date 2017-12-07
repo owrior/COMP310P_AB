@@ -23,6 +23,7 @@
             }
             
             /*Login Control*/
+            /* Style The Dropdown Button */
             .login_control_btn {
                 background-color: #4CAF50;
                 color: white;
@@ -31,16 +32,44 @@
                 border: none;
                 cursor: pointer;
             }
-            div.login_control_dropdown{
-                display: inline-block;
+
+            /* The container <div> - needed to position the dropdown content */
+            .login_control_dropdown {
                 position: relative;
-                float: right;
+                display: inline-block;
             }
-            .login_control_btn:hover .login_control {
+
+            /* Dropdown Content (Hidden by Default) */
+            .login_control_content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .login_control_content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
                 display: block;
             }
-            .login_control_dropdown a:hover {
+
+            /* Change color of dropdown links on hover */
+            .login_control_content a:hover {
                 background-color: #f1f1f1;
+            }
+
+            /* Show the dropdown menu on hover */
+            .login_control_dropdown:hover .login_control_content {
+                display: block;
+            }
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .login_control_dropdown:hover .login_control_btn {
+                background-color: #3e8e41;
             }
             
             /*Navigation Control*/
