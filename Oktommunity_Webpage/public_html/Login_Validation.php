@@ -4,25 +4,24 @@ ini_set('display_errors',1);
     
     $connection = connect();
     
+    
     function getUser(){
         $user = array();
         $user['email']= $_POST['email_entered'];
         $user['password']=$_POST['password_entered'];
         return $user;
-
     }
 
     $user = getUser();
 
-    $login_query = "SELECT Password FROM Customers WHERE Email LIKE " .$user['email'];
+    $login_query = "SELECT * FROM Customers";// WHERE Email = " . $user['email'];
     
-    $password = mysqli_query($connection,$login_query);
+    $password = mysqli_query($connection, $login_query);
+//    var_dump($password);
     
     if ($password == $user['password']) {
-        return header ('Location: index.php');
+        header ('Location: index.php');
     }
     else {
-        return header('Location: SignUp.php');
+        header('Location: SignUp.php');
     }
-
-?>
