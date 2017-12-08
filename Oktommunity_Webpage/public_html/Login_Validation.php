@@ -3,8 +3,7 @@ ini_set('display_errors',1);
     require('connect.php');
     
     $connection = connect();
-    
-    
+      
     function getUser(){
         $user = array();
         $user['email']= $_POST['email_entered'];
@@ -14,10 +13,10 @@ ini_set('display_errors',1);
 
     $user = getUser();
 
-    $login_query = "SELECT * FROM Customers";// WHERE Email = " . $user['email'];
+    $login_query = "SELECT password FROM Customers WHERE Email = " . $user['email'];
     
     $password = mysqli_query($connection, $login_query);
-//    var_dump($password);
+    //var_dump($password);
     
     if ($password == $user['password']) {
         header ('Location: index.php');
