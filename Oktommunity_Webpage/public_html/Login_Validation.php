@@ -12,18 +12,18 @@
 
     $user = getUser();
 
-    $login_query = "SELECT Password FROM Customers WHERE Email LIKE '$email_1';";
+    $login_query = "SELECT Password FROM Customers WHERE Email LIKE '$email';";
     
     $password = query($connection,$login_query);
     
     if ($password == $password_entered) {
-        echo "worked";
         connect.connect(false);
         header ('Location: index.php');
+        exit;
     }
     else {
-        echo "fucked";
         connect.connect(false);
-        header('Location: index.php');
+        header('Location: SignUp.php');
+        exit;
     }
 ?>
