@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='stylesheet.css'>
     </head>
-    <body style="background-image:url(Home.jpg)">
+    <body style="background-image:url(/Images/Home.jpg)">
         <div class='login_control_dropdown'>
             <button class="login_control_btn">User</button>
             <div class = 'login_control_content'>
