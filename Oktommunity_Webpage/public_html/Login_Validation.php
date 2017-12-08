@@ -19,11 +19,11 @@
     if ($password == $password_entered) {
         echo "worked";
         connect.connect(false);
-        header ('Location: index.html');
+        header ('Location: index.php');
     }
     else {
         echo "fucked";
         connect.connect(false);
-        header('Location: index.html');
+        header('Location: index.php');
     }
 ?>
