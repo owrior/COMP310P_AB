@@ -14,8 +14,7 @@
                 }
         }    
  
-        function disconnect() {
-            $connection = $_POST('$connection');
+        function disconnect($connection) {
             mysqli_close($connection);
         }
 ?>       

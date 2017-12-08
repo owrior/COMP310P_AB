@@ -1,7 +1,8 @@
 <?php
 ini_set('display_errors',1);
-    connect.connect() or die().mysqli_error();
+    require('connect.php');
     
+    $connection = connect();
     
     function getUser(){
         $user = array();
@@ -13,16 +14,14 @@ ini_set('display_errors',1);
 
     $user = getUser();
 
-    $login_query = "SELECT Password FROM Customers WHERE Email LIKE " +$user['email'];
+    $login_query = "SELECT Password FROM Customers WHERE Email LIKE " .$user['email'];
     
-    $password = query($connection,$login_query);
+    $password = mysqli_query($connection,$login_query);
     
     if ($password == $user['password']) {
-        connect.disconnect();
         return header ('Location: index.php');
     }
     else {
-        connect.disconnect();
         return header('Location: SignUp.php');
     }
 
