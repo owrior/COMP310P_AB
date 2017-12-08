@@ -109,7 +109,7 @@
                 padding: 0px;
                 float:left;
                 height:100%;
-                width:80%; 
+                width:84%; 
                 background-color: dimgray;
             }
             h1.main{
@@ -126,7 +126,7 @@
             div.sidebar{
                 float:right;
                 height:100%;
-                width:19.7%; 
+                width:15.7%; 
                 background-color:blanchedalmond;
             }
             h2.sidebar{
@@ -156,7 +156,7 @@
             h3.login_page_main{
                 text-align: center;
                 font-style:italic;
-                font-size: 100px;
+                font-size: 300px;
                 padding: 0px 0px 0px 0px;
             }
             p.login_page_main{
