@@ -30,7 +30,7 @@ and open the template in the editor.
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div class='signup_page_main'style="background-image: url('Home.JPG')">
+        <div class='signup_page_main'style="background-image: url('Home2.JPG')">
         <h3 class="signup_page_main">SIGN UP!</h3>
         <form action="/action_page.php">
             <label>U S E R N A M E : </label><input type="text" name="email_entered"><br>
