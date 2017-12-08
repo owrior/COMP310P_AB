@@ -12,9 +12,7 @@
             else {
                 return $connection;
             }
-//            return false;
     }    
-
     function disconnect($connection) {
         mysqli_close($connection);
     }
