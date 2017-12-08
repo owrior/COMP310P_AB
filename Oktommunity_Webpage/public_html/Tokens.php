@@ -30,7 +30,7 @@ and open the template in the editor.
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div class='tokens_page_main'>
+        <div class='tokens_page_main'style="background-image: url('TOKEN.JPG')">
             <h3 class="tokens_page_main">GET YOUR TOKENS HERE!</h3>
         </div>
     </body>
