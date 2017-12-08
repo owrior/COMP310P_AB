@@ -1,17 +1,23 @@
-<?php 
-        function connect($type=bool){
-            if ($type == true) {
+<?php
+    
+        function connect(){
                 $dbhost = 'localhost';
                 $dbuser = 'root';
                 $dbpass = 'root';
                 $dbname = 'Oktober';
-                $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname) or die('Error connecting to MySQL server.'.mysql_error());
-                return $connection;
-            }
-            else {
-                mysqli_close($connection);
-            }
+                $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                if (!$connection) {
+                    die('Error connecting to MySQL server.'.mysql_error());
+                }
+                else {
+                    return $connection;
+                }
+        }    
+ 
+        function disconnect() {
+            $connection = $_POST('$connection');
+            mysqli_close($connection);
         }
-?>        
+?>       
 
 
