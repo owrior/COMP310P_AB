@@ -30,7 +30,7 @@ and open the template in the editor.
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div class='login_page_main'>
+        <div class='login_page_main'style="background-image: url('login.JPG');>
         <h3 class="login_page_main">LOGIN</h3>
         <form method="POST" action="Login_Validation.php" name="Login details validation">
             <label>U S E R N A M E : </label><input type="text" name="email_entered"><br>
