@@ -32,7 +32,7 @@ and open the template in the editor.
         </div>
         <div class='login_page_main'style="background-image: url('login.JPG')" >
         <h3 class="login_page_main">LOGIN</h3>
-        <form method="POST" action="Login_Validation.php" name="Login details validation">
+        <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
             <label>U S E R N A M E : </label><input type="text" name="email_entered"><br>
             <label>P A S S W O R D : </label><input type="text" name="password_entered"><br>
             <input type='Submit' value='LOGIN'>
