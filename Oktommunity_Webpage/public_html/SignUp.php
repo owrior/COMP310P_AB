@@ -32,6 +32,18 @@ and open the template in the editor.
         </div>
         <div class='signup_page_main'style="background-image: url('Home.JPG')">
         <h3 class="signup_page_main">SIGN UP!</h3>
+        <form action="/action_page.php">
+            <label>U S E R N A M E : </label><input type="text" name="email_entered"><br>
+            <label>P A S S W O R D : </label><input type="text" name="password_entered"><br>
+            <label>F I R S T  N A M E : </label><input type="text" name="password_entered"><br>    
+            <label>L A S T  N A M E : </label><input type="text" name="password_entered"><br>
+            <label>D A T E  O F  B I R T H : </label><input type="text" name="email_entered"><br>
+            <label>A D D R E S S: </label><input type="text" name="password_entered"><br>
+            <label>P O S T  C O D E : </label><input type="text" name="email_entered"><br>
+            <label>E M A I L : </label><input type="text" name="password_entered"><br>
+            <input type='Submit' value='R E G I S T E R'>
+            
+        </form>
         </div>
         </body>
 </html>
