@@ -13,14 +13,14 @@ ini_set('display_errors',1);
 
     $user = getUser();
 
-    $login_query = "SELECT password FROM Customers WHERE Email = " . $user['email'];
+    $login_query = "SELECT password FROM Customer WHERE Email = '" . $user['email'] . "'";
     
     $password = mysqli_query($connection, $login_query);
-    //var_dump($password);
+    var_dump($password);
     
     if ($password == $user['password']) {
-        header ('Location: index.php');
+        header ('Location: /View/index.php');
     }
     else {
-        header('Location: SignUp.php');
+        header('Location: /View/SignUp.php');
     }
