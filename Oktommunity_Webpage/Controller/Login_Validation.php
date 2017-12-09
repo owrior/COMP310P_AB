@@ -15,7 +15,7 @@
         //var_dump($count);
         if ($count == 1) {
             disconnect($connection);
-            header("location: /View/index.php");   
+            header("location: /View/LoggedInHomepage.php");   
         }
         else {
             disconnect($connection);

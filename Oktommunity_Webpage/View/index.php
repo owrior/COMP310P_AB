@@ -22,9 +22,6 @@
             <ul class='navigation_control'>
                 <li class='navigation_control'><a href=index.php>OKTOMUNITY</a></li>
                 <li class='navigation_control'><a href=Events.php>Events</a></li>
-                <li class='navigation_control'><a href=Tokens.php>Tokens</a></li>
-                <li class='navigation_control'><a href=Create.php>Create</a></li>
-                <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
         <div class='main'style="background-image: url('/Images/Signup.JPG'); float: left; ">
