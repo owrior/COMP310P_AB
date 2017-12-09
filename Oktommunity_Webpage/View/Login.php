@@ -33,10 +33,11 @@ and open the template in the editor.
         <div class='login_page_main'style="background-image: url('login.JPG')" >
         <h3 class="login_page_main">LOGIN</h3>
         <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
-            <label>U S E R N A M E : </label><input type="text" name="email_entered"><br>
-            <label>P A S S W O R D : </label><input type="text" name="password_entered"><br>
+            <label>U S E R N A M E : </label><input type="text" name="email_entered" id="email_entered"><br>
+            <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
             <input type='Submit' value='LOGIN'>
         </form>
+        <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
         </div>
     </body>
 </html>

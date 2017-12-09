@@ -1,26 +1,25 @@
 <?php
-ini_set('display_errors',1);
+//ini_set('display_errors',1);
     require('connect.php');
+    session_start();
     
-    $connection = connect();
-      
-    function getUser(){
-        $user = array();
-        $user['email']= $_POST['email_entered'];
-        $user['password']=$_POST['password_entered'];
-        return $user;
-    }
-
-    $user = getUser();
-
-    $login_query = "SELECT password FROM Customer WHERE Email = '" . $user['email'] . "'";
-    
-    $password = mysqli_query($connection, $login_query);
-    var_dump($password);
-    
-    if ($password == $user['password']) {
-        header ('Location: /View/index.php');
-    }
-    else {
-        header('Location: /View/SignUp.php');
+    if ($_SERVER("REQUEST_METHOD") == "POST") {
+        
+        $email_entered = mysqli_real_escape_string($connection, $_POST('email_entered'));
+        $password_entered = mysqli_real_escape_string($connection, $_POST('password_entered'));
+        
+        $login_query = "SELECT id FROM Customer WHERE Email = '$email_entered' AND Password = '$password_entered'";
+        $result = mysqli_query($connection,$login_query);
+        
+        $count = mysqli_num_rows($result);
+        
+        if ($count == 1) {
+            session_register("email_entered");
+            $_SESSION['login_user'] = $email_entered;
+            
+            header("location: /View/index.php");
+        }
+        else {
+            return $error;
+        }
     }
