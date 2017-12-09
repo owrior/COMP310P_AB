@@ -30,7 +30,7 @@ and open the template in the editor.
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div class='login_page_main'style="background-image: url('login.JPG')" >
+        <div class='login_page_main'style="background-image: url('/Images/Login.JPG')" >
         <h3 class="login_page_main">LOGIN</h3>
         <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
             <input type="hidden" name="submitted" id="submitted" value="1"/>
