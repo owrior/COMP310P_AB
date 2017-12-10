@@ -13,11 +13,18 @@ and open the template in the editor.
     </head>
     <body>
         <div class='login_control_dropdown'>
-            <button class="login_control_btn">User</button>
+            <button class="login_control_btn"><?php 
+            if ($_SESSION['email'] == NULL) {
+                echo 'User';
+            }
+            else {
+                echo $_SESSION['email'];
+            }
+            ?></button>
             <div class = 'login_control_content'>
                 <a href=Login.php>Login</a>
                 <a href=SignUp.php>Sign Up</a>
-                <a href='/Controller/LogOut.php>Log Out</a>
+                <a href='/Controller/LogOut.php'>Log Out</a>
             </div>
         </div>
         <br>
