@@ -2,7 +2,7 @@
     ini_set('display_errors',1);
     require('connect.php');
     $connection = connect();
-    //session_start();
+    session_start();
     
         
         $email_entered = $_POST["email_entered"];
