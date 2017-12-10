@@ -13,7 +13,6 @@
             <div class = 'login_control_content'>
                 <a href=Login.php>Login</a>
                 <a href=SignUp.php>Sign Up</a>
-                <a href='/Controller/LogOut.php'>Log Out</a>
             </div>
         </div>
         <br>

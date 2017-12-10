@@ -16,10 +16,10 @@
         if ($count == 1) {
             $_SESSION['email'] = $email_entered;
             disconnect($connection);
-            header("location: /View/LoggedInHomepage.php");   
+            header("location: /View/LoggedInAccessible/LoggedInHomepage.php");   
         }
         else {
             disconnect($connection);
             $_SESSION['errorMessge'] = "Incorrect usernam or password.";
-            header("location: /View/Login.php");
+            header("location: /View/LoggedOutAccessible/Login.php");
         }
