@@ -207,7 +207,7 @@
                 text-align: center;
                 height:100%;
                 width:80%; 
-                background-color: dimgray;
+                background-color: #3f3f3e;
                 float: left;            
             }
             h1.events_page_main{
@@ -233,7 +233,7 @@
                 text-align: left;
                 height: 50%;
                 width: 19.7%;
-                background-color: #ffb16d;
+                background-color:#f2c391;
                 float: right;
             }
             h2.events_page_sidebar_1{
@@ -245,7 +245,7 @@
                 text-align: left;
                 height: 50%;
                 width: 19.7%;
-                background-color: #f2c391;
+                background-color:#f2c391;
                 float: right;
             }
             h2.events_page_sidebar_2{
@@ -256,15 +256,72 @@
             div.events_1{
               text-align: center;
                 height: 5cm;
-                
+                width: 28.75cm;
                 background-color: blanchedalmond;
                 float: left; 
-                padding: 2% 2% 0% 2%;
+                padding: 5% 2% 0% 2%;
             }
             h3.events_1{
-                font-size: 14px;
+                font-size: 25px;
                 font-style: italic;
                 margin: 2px;
+            }
+             a:link, a:visited{
+                color: white;
+                text-align: center;
+
+                text-decoration: none;   
+            }
+             a:hover, a:active{
+                text-decoration: none;
+                background-color: #111;
+            }
+            div.events_2{
+              text-align: center;
+                height: 5cm;
+                width: 28.75cm;
+                background-color: blanchedalmond;
+                float: left; 
+                padding: 5% 2% 0% 2%;
+            }
+            h4.events_2{
+                font-size: 25px;
+                font-style: italic;
+                margin: 2px;
+            }
+             a:link, a:visited{
+                color: white;
+                text-align: center;
+
+                text-decoration: none;   
+            }
+             a:hover, a:active{
+                text-decoration: none;
+                background-color: #111;
+            }
+          
+            div.events_3{
+              text-align: center;
+                height: 5cm;
+                width: 28.75cm;
+                background-color: blanchedalmond;
+                float: left; 
+                padding: 5% 2% 0% 2%;
+            }
+            h5.events_3{
+                font-size: 25px;
+                font-style: italic;
+                margin: 2px;
+            }
+             a:link, a:visited{
+                color: white;
+                text-align: center;
+
+                text-decoration: none;   
+            }
+             a:hover, a:active{
+                text-decoration: none;
+                background-color: #111;
             }
             /*Tokens Page*/
             div.tokens_page_main{
