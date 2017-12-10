@@ -253,6 +253,19 @@
                 font-style: italic;
                 margin: 2px;
             }
+            div.events_1{
+              text-align: center;
+                height: 5cm;
+                width: 25cm;
+                background-color: blanchedalmond;
+                float: left; 
+                padding: 2% 2% 0% 2%;
+            }
+            h3.events_1{
+                font-size: 14px;
+                font-style: italic;
+                margin: 2px;
+            }
             /*Tokens Page*/
             div.tokens_page_main{
                 padding: 0px;
