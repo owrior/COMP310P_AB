@@ -44,7 +44,7 @@ and open the template in the editor.
             <p> 27th DECEMBER 2017 <br>
                 EC2A 3BS <br>
                 £15.00 <br>
-            <a href=Events_1.php>B U Y  N O W !</a></p>
+            <a href=Events_1.php>B U Y   N O W !</a></p>
         </div>
         </div>
         <div class='events_page_sidebar_1'>
