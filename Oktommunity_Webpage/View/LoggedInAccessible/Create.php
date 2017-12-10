@@ -33,6 +33,8 @@
         </div>
         <div class='create_page_main'>
             <h3 class="create_page_main">CREATE</h3>
+        
         </div>
+        
     </body>
 </html>

@@ -49,7 +49,7 @@
             .login_control_content {
                 display: none;
                 position: absolute;
-                background-color: #f9f9f9;
+                background-color: #444343;
                 min-width: 160px;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
@@ -206,7 +206,7 @@
             div.events_page_main{
                 text-align: center;
                 height:100%;
-                width:80%; 
+                width:84%; 
                 background-color: #3f3f3e;
                 float: left;            
             }
@@ -232,7 +232,7 @@
             div.events_page_sidebar_1{
                 text-align: left;
                 height: 50%;
-                width: 19.7%;
+                width: 15.7%;
                 background-color:#f2c391;
                 float: right;
             }
@@ -244,7 +244,7 @@
             div.events_page_sidebar_2{
                 text-align: left;
                 height: 50%;
-                width: 19.7%;
+                width: 15.7%;
                 background-color:#f2c391;
                 float: right;
             }
@@ -256,7 +256,7 @@
             div.events_1{
               text-align: center;
                 height: 5cm;
-                width: 28.75cm;
+                width: 30.2cm;
                 background-color: blanchedalmond;
                 float: left; 
                 padding: 5% 2% 0% 2%;
@@ -279,7 +279,7 @@
             div.events_2{
               text-align: center;
                 height: 5cm;
-                width: 28.75cm;
+                width: 30.2cm;
                 background-color: blanchedalmond;
                 float: left; 
                 padding: 5% 2% 0% 2%;
@@ -303,7 +303,7 @@
             div.events_3{
               text-align: center;
                 height: 5cm;
-                width: 28.75cm;
+                width: 30.2cm;
                 background-color: blanchedalmond;
                 float: left; 
                 padding: 5% 2% 0% 2%;
@@ -373,4 +373,5 @@
                 text-align: center;
                 font-style: normal;
             }
+            /*Buy Page*/
 
