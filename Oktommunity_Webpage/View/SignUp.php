@@ -29,6 +29,17 @@ and open the template in the editor.
         </div>
         <div class='signup_page_main'style="background-image: url('/Images/Home.JPG')">
         <h3 class="signup_page_main">SIGN UP!</h3>
+        <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
+            <input type="hidden" name="submitted" id="submitted" value="1"/>
+            <label>F I R S T  N A M E : </label><input type="text" name="email_entered" id="email_entered"><br>
+            <label>L A S T  N A M E : </label><input type="password" name="password_entered" id="password_entered"><br>
+            <label>E M A I L : </label><input type="text" name="email_entered" id="email_entered"><br>
+            <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
+            <label>A D D R E S S : </label><input type="text" name="email_entered" id="email_entered"><br>
+            <label>P O S T  C O D E : </label><input type="password" name="password_entered" id="password_entered"><br>
+            <label>D A T E  O F  B I R T H : </label><input type="password" name="password_entered" id="password_entered"><br>
+            <input type='Submit' value='R E G I S T E R'>
+        </form>
         </div>
         </body>
 </html>
