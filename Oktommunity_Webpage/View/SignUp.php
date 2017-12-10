@@ -31,7 +31,7 @@ and open the template in the editor.
         <h3 class="signup_page_main">SIGN UP!</h3>
         <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
             <input type="hidden" name="submitted" id="submitted" value="1"/>
-            <label>F I R S T  N A M E : </label><input type="text" name="email_entered" id="email_entered"><br>
+            <label>F I R S T  N A M E : </label><input type="text" name="firstname_entered" id="firstname_entered"><br>
             <label>L A S T  N A M E : </label><input type="password" name="password_entered" id="password_entered"><br>
             <label>E M A I L : </label><input type="text" name="email_entered" id="email_entered"><br>
             <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
