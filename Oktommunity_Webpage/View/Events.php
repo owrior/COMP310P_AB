@@ -43,7 +43,7 @@ and open the template in the editor.
             <h3 class="events_1">BALLIE BALLERSON</h3>
             <p> 27th DECEMBER 2017 <br>
                 EC2A 3BS <br>
-                £15.00 
+                £15.00 <br>
             <a href=Events_1.php>B U Y  N O W !</a></p>
         </div>
         </div>
