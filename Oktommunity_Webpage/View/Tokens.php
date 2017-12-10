@@ -17,14 +17,14 @@ and open the template in the editor.
             <div class = 'login_control_content'>
                 <a href=Login.php>Login</a>
                 <a href=SignUp.php>Sign Up</a>
-                <a href=LogOut.php>Log Out</a>
+                <a href='/Controller/LogOut.php>Log Out</a>
             </div>
         </div>
         <br>
         <div class='navigation_control'>
             <ul class='navigation_control'>
-                <li class='navigation_control'><a href=index.php>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href=Events.php>Events</a></li>
+                <li class='navigation_control'><a href=LoggedInHomepage.php>OKTOMUNITY</a></li>
+                <li class='navigation_control'><a href=LoggedInEvents.php>Events</a></li>
                 <li class='navigation_control'><a href=Tokens.php>Tokens</a></li>
                 <li class='navigation_control'><a href=Create.php>Create</a></li>
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
