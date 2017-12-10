@@ -1,5 +1,5 @@
 <?php
-    ini_set('display_errors',1);
+
     require('connect.php');
     $connection = connect();
     session_start();
@@ -12,13 +12,15 @@
         $result = mysqli_query($connection,$login_query);
         
         $count = mysqli_num_rows($result);
-        //var_dump($count);
+
         if ($count == 1) {
+            $_SESSION['email'] = $email_entered;
             disconnect($connection);
             header("location: /View/LoggedInHomepage.php");   
         }
         else {
             disconnect($connection);
+            $_SESSION['errorMessge'] = "Incorrect usernam or password.";
+            session_destroy();
             header("location: /View/Login.php");
-            $error = "Your Login Name or Password is invalid.";
         }

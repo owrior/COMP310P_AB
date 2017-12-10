@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?php session_start()?>
 <html>
     <head>
         <title>LOG IN</title>
@@ -13,7 +9,14 @@ and open the template in the editor.
     </head>
     <body>
         <div class='login_control_dropdown'>
-            <button class="login_control_btn">User</button>
+            <button class="login_control_btn"><?php 
+            if ($_SESSION['email'] == NULL) {
+                echo 'User';
+            }
+            else {
+                echo $_SESSION['email'];
+            }
+?></button>
             <div class = 'login_control_content'>
                 <a href=Login.php>Login</a>
                 <a href=SignUp.php>Sign Up</a>
@@ -35,7 +38,7 @@ and open the template in the editor.
             <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
             <input type='Submit' value='LOGIN'>
         </form>
-        <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+        <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $SESSION['errorMessage']; ?></div>
         </div>
     </body>
 </html>
