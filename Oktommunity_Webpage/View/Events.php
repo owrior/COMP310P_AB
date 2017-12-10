@@ -38,6 +38,12 @@ and open the template in the editor.
                 <input type='date' name='date_to'>
                 <input type='submit' name='search'>
             </form>
+            <div class="events_1" style="background-image: url('http://www.suitcaseandheels.com/wp-content/uploads/2017/06/Ball-Pit-Bar-Ballie-Ballerson-TW.png')">
+            <h3 class="events_1">BALLIE BALLERSON</h3>
+            <p> 27th DECEMBER 2017 <br>
+                EC2A 3BS <br>
+                £15.00 </p>
+        </div>
         </div>
         <div class='events_page_sidebar_1'>
             <h2 class='events_page_sidebar_1'>Event's <br>You're Attending...</h2>
@@ -51,11 +57,6 @@ and open the template in the editor.
         <div class="events_page_sidebar_2">
             <h2 class="events_page_sidebar_2">Give Feedback On Event's You've Attended...</h2>
         </div>
-        <div class="events_1" style="background-image: url('http://www.suitcaseandheels.com/wp-content/uploads/2017/06/Ball-Pit-Bar-Ballie-Ballerson-TW.png')">
-            <h3 class="events_1">BALLIE BALLERSON</h3>
-            <p> 27th DECEMBER 2017 <br>
-                EC2A 3BS <br>
-                £15.00 </p>
-        </div>
+        
     </body>
 </html>
