@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start() ?>
 <html>
     <head>
         <title>LOG IN</title>
@@ -9,14 +9,7 @@
     </head>
     <body>
         <div class='login_control_dropdown'>
-            <button class="login_control_btn"><?php 
-            if ($_SESSION['email'] == NULL) {
-                echo 'User';
-            }
-            else {
-                echo $_SESSION['email'];
-            }
-            ?></button>
+            <button class="login_control_btn">User</button>
             <div class = 'login_control_content'>
                 <a href=Login.php>Login</a>
                 <a href=SignUp.php>Sign Up</a>
@@ -38,7 +31,7 @@
             <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
             <input type='Submit' value='LOGIN'>
         </form>
-        <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $SESSION['errorMessage']; ?></div>
+        <div style = "font-size:11px; color:blanchedalmond; margin-top:10px"><?php echo $SESSION['errorMessage']; ?></div>
         </div>
     </body>
 </html>

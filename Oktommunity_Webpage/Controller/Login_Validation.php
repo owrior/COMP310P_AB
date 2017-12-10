@@ -21,6 +21,5 @@
         else {
             disconnect($connection);
             $_SESSION['errorMessge'] = "Incorrect usernam or password.";
-            session_destroy();
             header("location: /View/Login.php");
         }
