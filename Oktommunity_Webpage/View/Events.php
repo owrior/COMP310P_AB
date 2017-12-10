@@ -38,7 +38,7 @@ and open the template in the editor.
                 <input type='date' name='date_to'>
                 <input type='submit' name='search'>
             </form>
-            <div class="events_1" style="background-image: url('http://www.suitcaseandheels.com/wp-content/uploads/2017/06/Ball-Pit-Bar-Ballie-Ballerson-TW.png')">
+            <div class="events_1" style="background-image: url('http://www.suitcaseandheels.com/wp-content/uploads/2017/06/1491255743723-e1496621774724.jpeg')">
             <h3 class="events_1">BALLIE BALLERSON</h3>
             <p> 27th DECEMBER 2017 <br>
                 EC2A 3BS <br>
