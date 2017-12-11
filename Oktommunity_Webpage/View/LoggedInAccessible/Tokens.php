@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start() ?>
+<?php session_start()?>
 <html>
     <head>
         <title>Tokens</title>
@@ -33,6 +33,23 @@
         </div>
         <div class='tokens_page_main'style="background-image: url('/Images/token.JPG'); float: left; ">
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
+            <div>
+            <form method="post" action="BuyTokens.php">
+            <label>Which type of token would you like to buy?</label>
+            <?php require 'connect.php';
+            $connection = connect();
+            $filter = mysqli_query($connection, 'SELECT * FROM TokenType');
+            var_dump($filter);
+            while ($row = mysqli_fetch_array($filter)) {
+                $menu  = '<option>' .$row('dropdown_option').'</option>';
+            }
+            $menu = '</select></form>';
+            echo $menu;
+            ?>
+            <input type="submit" value="submit">
+            </form>
+            </div>
         </div>
+        
     </body>
 </html>
