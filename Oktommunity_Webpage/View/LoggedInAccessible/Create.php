@@ -34,6 +34,45 @@
         <div class='create_page_main'>
             <h3 class="create_page_main">CREATE</h3>
         
+        <?php echo $result; ?>
+
+	<form method="post" action="/Controller/PageCreateValidation.php">
+		
+	<h3>Create Your Brand New Event Here...</h3>
+		
+	<div class="eventCreation">
+	<label for="Event_Name">Event Name</label>
+	<input type="text" placeholder="Please enter the event name" name="Event_Name" class="Controller" />
+        </div>
+
+		
+	<div class="eventCreation">
+	<label for="Event_Date">Event Date</label>
+	<input type="date" name="Event_Date" />
+	</div>
+		
+	<div class="eventCreation">
+	<label for="TicketSaleEnd_Date">End ticket sale date of the event:</label>
+	<input type="date" name="TicketSaleEnd_Date" />
+	</div>
+
+	<div class="eventCreation">
+	<label for="Event_Capacity">Capacity of the event:</label>
+	<input type="number" name="Event_Capacity" class="Controller"/>
+	</div>
+
+	<div class="eventCreation">
+	<label for="Description">Description<label>
+        <input type="text" name="Description" class="Controller"/>
+        </div>
+
+	<br></br>
+
+	<div class="eventCreation">
+	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">；
+        <form> <button type="submit" action="/Controller/PageCreateValidation.php" class="btn btn-success btn-lg"> </form>
+        </div>
+        </form>
         </div>
         
     </body>
