@@ -22,17 +22,14 @@ $connection = connect();
             $result='<div class="alert alert-danger"><strong>There were error(s) form:</strong>'.$error.'</div>';
         }
         else{
-            $Event_Name = mysqli_real_escape_string($conn, $_POST['Event_Name']);
-            $Event_Date = mysqli_real_escape_string($conn, $_POST['Event_Date']);
-            $TicketSaleEnd_Date = mysqli_real_escape_string($conn, $_POST['TicketSaleEnd_Date']);
-            $Event_Capacity = mysqli_real_escape_string($conn, $_POST['Event_Capacity']);
-            $Description = mysqli_real_escape_string($conn, $_POST['Description']);
+            $Event_Name = $_POST['Event_Name'];
+            $Event_Date = $_POST['Event_Date'];
+            $TicketSaleEnd_Date = $_POST['TicketSaleEnd_Date'];
+            $Event_Capacity = $_POST['Event_Capacity'];
+            $Description = $_POST['Description'];
             $query="INSERT INTO event (Event_Name, Event_Date, TicketSaleEnd_Date, Event_Capacity, Description) VALUES 
                     ('$Event_Name', '$Event_Date', '$TicketSaleEnd_Date', '$Event_Capacity', '$Description')";
-            mysqli_query($conn, $query);
-           // header('location: /View/LoggedInAccessible/Control.php');
+            mysqli_query($connection, $query);
+            header('location: /View/LoggedInAccessible/Control.php');
         }
-
 	}
-        
-        ？>

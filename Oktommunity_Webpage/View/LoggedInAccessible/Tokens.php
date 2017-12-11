@@ -36,16 +36,17 @@
             <div>
             <form method="post" action="BuyTokens.php">
             <label>Which type of token would you like to buy?</label>
+            <select class="form-dropdown" style="width:150px" id="input_5" name="q5_listOf">
             <?php require 'connect.php';
             $connection = connect();
-            $filter = mysqli_query($connection, 'SELECT * FROM TokenType');
-            var_dump($filter);
+            $filter = mysqli_query($connection, 'SELECT Type FROM TokenType');
             while ($row = mysqli_fetch_array($filter)) {
                 $menu  = '<option>' .$row('dropdown_option').'</option>';
             }
             $menu = '</select></form>';
             echo $menu;
             ?>
+            </select>
             <input type="submit" value="submit">
             </form>
             </div>
