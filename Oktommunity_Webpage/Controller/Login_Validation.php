@@ -9,6 +9,7 @@
         $password_entered = $_POST["password_entered"];
         
         $login_query = "SELECT Customer_ID FROM Customer WHERE Email = '$email_entered' AND Password = '$password_entered'";
+        
         $result = mysqli_query($connection,$login_query);
         
         $count = mysqli_num_rows($result);
@@ -20,6 +21,6 @@
         }
         else {
             disconnect($connection);
-            $_SESSION['errorMessge'] = "Incorrect usernam or password.";
+            $_SESSION['errorMessge'] = "Incorrect username or password.";
             header("location: /View/LoggedOutAccessible/Login.php");
         }

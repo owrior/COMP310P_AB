@@ -41,13 +41,13 @@
             $connection = connect();
             $filter = mysqli_query($connection, 'SELECT Type FROM TokenType');
             while ($row = mysqli_fetch_array($filter)) {
-                $menu  = '<option>' .$row('dropdown_option').'</option>';
+                $menu  = '<option>'.$row('Type').'</option>';
             }
-            $menu = '</select></form>';
+            //$menu = '</select></form>';
             echo $menu;
             ?>
             </select>
-            <input type="submit" value="submit">
+            <input type="submit" value="B U Y">
             </form>
             </div>
         </div>
