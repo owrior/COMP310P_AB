@@ -25,7 +25,6 @@
         <div class='login_page_main'style="background-image: url('/Images/Login.JPG')" >
         <h3 class="login_page_main">LOGIN</h3>
         <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
-            <input type="hidden" name="submitted" id="submitted" value="1"/>
             <label>E M A I L : </label><input type="text" name="email_entered" id="email_entered"><br>
             <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
             <input type='Submit' value='LOGIN'>
