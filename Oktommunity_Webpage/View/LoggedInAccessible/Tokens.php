@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start();
+require '/Controller/BuyTokens.php'?>
 <html>
     <head>
         <title>Tokens</title>
@@ -46,15 +47,14 @@
                             <option value="5">5</option> 
                         </select>
                         </br>
-                        <select name ="TokenType">
+                        <label>Which type would you like?</label>                    
+                        <select name ="chosen_type">
                             <option value="0">Choose which kind</option>
-                            <?php 
-                            require 'BuyTokens.php';
-                            TokenTypeDropDown();
-                            ?>
+                            <?phpTokenTypeDropDown()?>
                         </select>                         
                         </br>
                         <input type="submit" value="BUY">
+                        </br>
                     </div>
                 </form>
             </div>
