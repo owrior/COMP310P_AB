@@ -34,22 +34,26 @@
         <div class='tokens_page_main'style="background-image: url('/Images/token.JPG'); float: left; ">
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
             <div>
-            <form method="post" action="/Controller/BuyTokens.php">
-                <label>Which type of token would you like to buy?</label>
-                <select class="form-dropdown">
-                <?php require 'connect.php';
-                $connection = connect();
-                $filter = mysqli_query($connection, "SELECT * FROM TokenType");
-                while ($row = mysqli_fetch_array($filter)) {
-                    $menu = "<option value='".$row['TokenTypeID']."'>".$row['Type']."</option>";
-                }
-                $menu = "</select></form>";
-                echo $menu;
-                disconnect($connection);
-                ?>             
-                <input type="submit" value="BUY">
-                <input type="text">
-            </form>
+                <form method="post" action="/Controller/BuyTokens.php">
+                    <input type="submit" value="BUY">
+                    <div>
+                    <select name ="TokenType">
+                        <option value="0">Choose</option>
+                        <?php require 'connect.php';
+                        $connection = connect();
+                        $filter = mysqli_query($connection, "SELECT * FROM TokenType");
+                        while ($row = mysqli_fetch_array($filter)) {
+                             echo "<option value=\"".$row['TokenType_ID']."\">".$row['Type']."</option>\n   ";
+                        }
+                        disconnect($connection);
+                        ?>  
+                    </select> 
+                    </div>
+                    <div>
+                        <label>Which type of token would you like to buy?</label>
+                    </div>
+                    <input type="submit" value="BUY">
+                </form>
             </div>
         </div>
         
