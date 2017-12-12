@@ -35,7 +35,6 @@
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
             <div>
                 <form method="post" action="/Controller/BuyTokens.php">
-                    <input type="submit" value="BUY">
                     <div>
                     <select name ="TokenType">
                         <option value="0">Choose</option>
@@ -43,7 +42,7 @@
                         $connection = connect();
                         $filter = mysqli_query($connection, "SELECT * FROM TokenType");
                         while ($row = mysqli_fetch_array($filter)) {
-                             echo "<option value=\"".$row['TokenType_ID']."\">".$row['Type']."</option>\n   ";
+                             echo "<option value=\"".$row['TokenType_ID']."\">".$row['Type']."</option>\n  ";
                         }
                         disconnect($connection);
                         ?>  

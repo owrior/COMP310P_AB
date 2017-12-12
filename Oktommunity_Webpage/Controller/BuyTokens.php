@@ -1,7 +1,11 @@
 <?php
 ini_set('display_errors', 1);
+session_start();
 require 'connect.php';
 $connection = connect();
-session_start();
 
 $email = $_SESSION('email');
+if (!$email == NULL) {
+    header("/View/LoggedOutAccessible/Login");
+}
+
