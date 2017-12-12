@@ -120,7 +120,7 @@
             </div>
             
             <div>
-                <select name="Type_ID">
+                <select name="Type">
                 <option value="0">Type</option>
                 <option value="1">Specialised in ales and stouts. </option>
                 <option value="2">Specialised in pale ales.</option>
