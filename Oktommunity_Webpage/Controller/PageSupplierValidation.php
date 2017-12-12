@@ -18,6 +18,9 @@ $connection = connect();
             if(!$_POST["Address"]){
             $error.="<br />Please enter the address.";
             }
+            if(!$_POST["Postcode"]){
+            $error.="<br />Please enter the postcode.";
+            }
             if($error){
             $result='<div class="alert alert-danger"><strong>There were error(s) form:</strong>'.$error.'</div>';
             echo $result;
@@ -28,8 +31,9 @@ $connection = connect();
             $Email = $_POST['Email'];
             $Phone_Number = $_POST['Phone_Number'];
             $Address = $_POST['Address'];
-            $query="INSERT INTO supplier (Name, Type, Email, Phone_Number, Address) VALUES 
-                    ('$Name', '$Type','$Email', '$Phone_Number', '$Address')";
+            $Postcode = $_POST['Postcode'];
+            $query="INSERT INTO supplier (Name, Type, Email, Phone_Number, Address, Postcode) VALUES 
+                    ('$Name', '$Type','$Email', '$Phone_Number', '$Address','$Postcode')";
             mysqli_query($connection, $query);
             header('location: /View/LoggedInAccessible/ControlSupplier.php');
         }
