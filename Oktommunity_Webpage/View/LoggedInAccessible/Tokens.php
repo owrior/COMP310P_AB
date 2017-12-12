@@ -33,25 +33,29 @@
         </div>
         <div class='tokens_page_main'style="background-image: url('/Images/token.JPG'); float: left; ">
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
-            <div>
+            <div class="token_form">
                 <form method="post" action="/Controller/BuyTokens.php">
                     <div>
-                    <select name ="TokenType">
-                        <option value="0">Choose</option>
-                        <?php require 'connect.php';
-                        $connection = connect();
-                        $filter = mysqli_query($connection, "SELECT * FROM TokenType");
-                        while ($row = mysqli_fetch_array($filter)) {
-                             echo "<option value=\"".$row['TokenType_ID']."\">".$row['Type']."</option>\n  ";
-                        }
-                        disconnect($connection);
-                        ?>  
-                    </select> 
+                        <label>How many would you like to buy?</label>
+                        <select name="Amount">
+                            <option value="0">Choose how many</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option> 
+                        </select>
+                        </br>
+                        <select name ="TokenType">
+                            <option value="0">Choose which kind</option>
+                            <?php 
+                            require 'BuyTokens.php';
+                            TokenTypeDropDown();
+                            ?>
+                        </select>                         
+                        </br>
+                        <input type="submit" value="BUY">
                     </div>
-                    <div>
-                        <label>Which type of token would you like to buy?</label>
-                    </div>
-                    <input type="submit" value="BUY">
                 </form>
             </div>
         </div>
