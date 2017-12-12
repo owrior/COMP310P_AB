@@ -34,15 +34,27 @@
         <div class='create_page_main'>
             <h3 class="create_page_main">CREATE</h3>
         
-        <?php echo $result; ?>
 
-	<form method="post" action="/Controller/PageCreateValidation.php">
-		
-	<h3>Create Your Brand New Event Here...</h3>
-		
+	
+	
+        <div class="newevent">
+        
+        <form method="post" action="/Controller/PageCreateValidation.php">
+            
+        <h3>Create Your Brand New Event Here...</h3>
+        
 	<div class="eventCreation">
 	<label for="Event_Name">Event Name</label>
-	<input type="text" placeholder="Please enter the event name" name="Event_Name" class="Controller" />
+	<input type="text" placeholder="Please enter the event name" name="Event_Name"  />
+        </div>
+        
+        <div class="eventCreation">
+            <label for="Location_ID">Location</label>
+            <select name="Location_ID">
+            <option value="0">Choose</option>
+            <option value="1">Regent's Park</option>
+            <option value="2">Hyde Park</option>
+            </select>
         </div>
 
 		
@@ -58,22 +70,94 @@
 
 	<div class="eventCreation">
 	<label for="Event_Capacity">Capacity of the event:</label>
-	<input type="number" name="Event_Capacity" class="Controller"/>
+	<input type="number" name="Event_Capacity" />
 	</div>
 
 	<div class="eventCreation">
 	<label for="Description">Description<label>
-        <input type="text" name="Description" class="Controller"/>
+        <input type="text" name="Description" />
         </div>
+        
+        <div class="eventCreation">
+            <label for="Category_ID">Category</label>
+            <select name="Category_ID">
+            <option value="0">Choose</option>
+            <option value="1">Over 18 Only</option>
+            <option value="2">Family Event</option>
+            <option value="3">ONLY BEER</option>
+            <option value="4">Beer and Food</option>
+            </select>
+        </div>
+        
+        <div class="eventCreation">
+            <label for="Supplier_ID">Supplier</label>
+            <select name="Supplier_ID">
+            <option value="0">Choose</option>
+            <option value="1">Brewdog</option>
+            <option value="2">Camden Town Brewery</option>
+            </select>
+        </div>
+        
+        
+    
 
 	<br></br>
 
 	<div class="eventCreation">
-	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">；
-        <form> <button type="submit" action="/Controller/PageCreateValidation.php" class="btn btn-success btn-lg"> </form>
+	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">
         </div>
+        
         </form>
+        
         </div>
+        
+            <div class="eventSupplier">
+            
+            <h3>New Supplier?</h4>
+            
+            <p>Make sure to register here</p>  
+            
+            <div>
+                <input type="text" placeholder="Company Name" name="Name"/>
+            </div>
+            
+            <div>
+                <select name="Type_ID">
+                <option value="0">Type</option>
+                <option value="1">1</option>
+                <option value="2">1</option>
+                </select>
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Email" name="Email"/>
+            </div>
+
+            <div>
+                <input type="number" placeholder="Phone Number" name="Phone"/>
+            </div>
+ 
+            <div>
+                <input type="text" placeholder="Address" name="Address"/>
+            </div>            
+            
+            <div>
+                <input type="text" placeholder="Postcode" name="Postcode"/>
+            </div>
+            <br></br>
+	<div>
+	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">
+        </div>
+            
+
+            
+            </div>
+
+            
+        
+        </div>
+        
+
         
     </body>
 </html>
