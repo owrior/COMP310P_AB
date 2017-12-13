@@ -37,6 +37,7 @@
                 <table border="2" style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
                     <thead>
                         <tr>
+                            <th>Event ID</th>
                             <th>Event</th>
                             <th>Date</th>
                             <th>Ticket Sale final release</th>
@@ -48,11 +49,12 @@
                     <?php $results = $_SESSION['searchResults'];
                     while($row = mysql_fetch_array($results)){?>
                     <tr>
-                            <td><?php echo $row['Event_Name'];?></td>
-                            <td><?php echo $row['Event_Date'];?></td>
-                            <td><?php echo $row['TicketSaleEnd_Date'];?></td>
-                            <td><?php echo $row['Categories.Category_Name'];?></td>
-                            <td><?php echo $row['Event_Capacity'];?></td>
+                            <td><?php echo $row['Event.Event_ID']?></td>
+                            <td><?php echo $row['Event_Name']?></td>
+                            <td><?php echo $row['Event_Date']?></td>
+                            <td><?php echo $row['TicketSaleEnd_Date']?></td>
+                            <td><?php echo $row['Categories.Category_Name']?></td>
+                            <td><?php echo $row['Event_Capacity']?></td>
                     </tr>
                     <?php }?>
                     </tbody>
