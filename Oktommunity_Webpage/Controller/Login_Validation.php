@@ -15,7 +15,7 @@
         $count = mysqli_num_rows($result);
 
         if ($count == 1) {
-            $_SESSION['email'] = $email_entered;
+            $_SESSION["email"] = $email_entered;
             disconnect($connection);
             header("location: /View/LoggedInAccessible/LoggedInHomepage.php");   
         }

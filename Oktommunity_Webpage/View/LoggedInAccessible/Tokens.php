@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<?php session_start();
-require '/Controller/BuyTokens.php'?>
+<?php session_start()?>
 <html>
     <head>
         <title>Tokens</title>
@@ -47,11 +46,24 @@ require '/Controller/BuyTokens.php'?>
                             <option value="5">5</option> 
                         </select>
                         </br>
+                        <?php if (!$_SESSION['error_message_1']) {
+                              }
+                              else {
+                               echo $_SESSION['error_message_1'];   
+                              }?> 
+                        </br>
                         <label>Which type would you like?</label>                    
                         <select name ="chosen_type">
                             <option value="0">Choose which kind</option>
-                            <?phpTokenTypeDropDown()?>
+                            <option value="1">Drinks</option>
+                            <option value="2">Food</option>
                         </select>                         
+                        </br>
+                        <?php if (!$_SESSION['error_message_2']) {
+                              }
+                              else {
+                               echo $_SESSION['error_message_2'];   
+                              }?>
                         </br>
                         <input type="submit" value="BUY">
                         </br>
