@@ -23,9 +23,9 @@ function buyTokens($Customer_ID, $Type, $Amount) {
 function TokenTypeDropDown() {
     require 'connect.php';
     $connection = connect();
-    $filter = mysqli_query($connection, "SELECT * FROM TokenType");
+    $filter = mysqli_query($connection, "SELECT TokenType_ID, Type FROM TokenType");
     while ($row = mysqli_fetch_array($filter)) {
-        $menu = '<option value="' . $row['TokenType_ID'] . '">' . $row['Type'] . '</option>';
+        $menu = "<option value='" . $row['TokenType_ID'] . "'>" . $row['Type'] . "</option>";
         echo $menu;
     }
     disconnect($connection);    
@@ -59,5 +59,3 @@ else {
     }
 
 }
-
-
