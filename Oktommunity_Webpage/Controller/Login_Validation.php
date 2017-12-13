@@ -20,6 +20,6 @@
         }
         else {
             disconnect($connection);
-            $_SESSION['errorMessge'] = "Incorrect usernam or password.";
+            $_SESSION['errorMessge'] = "Incorrect username or password.";
             header("location: /View/LoggedOutAccessible/Login.php");
         }
