@@ -32,7 +32,7 @@
             </form>
             <?php 
             require 'eventsSearch.php'; 
-            searchEvents($event_name, $category, $event_date_from, $event_date_to);
+            searchEvents();
             while($row = mysql_fetch_array($results)) {?>
             <tr>
                     <td><?php echo $row['Event_Name']?></td>
