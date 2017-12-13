@@ -31,4 +31,4 @@
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div action='/Controller/Event_Info_Retrieval.php'
+        <div action='/Controller/Event_info_retrieval.php'

@@ -40,21 +40,21 @@
                 <input type='submit' name='search'>
             </form>
                         <div class="events_1" style="background-image: url('http://www.vlondoncity.co.uk/wp-content/uploads/2015/12/MAIN-PIC1.jpg')">
-            <h5 class="events_1">NEW YEAR'S EVE</h5>
+            <h3 class="events_1">NEW YEAR'S EVE</h3>
             <p> 30TH DECEMBER 2017 <br>
                 EC2A 3BS <br>
                 £20.00 <br>
             <a href=Buy.php>B U Y   N O W !</a></p>
             </div>
             <div class="events_2" style="background-image: url('http://www.suitcaseandheels.com/wp-content/uploads/2017/06/1491255743723-e1496621774724.jpeg')">
-            <h3 class="events_2">BALLIE BALLERSON</h3>
+            <h4 class="events_2">BALLIE BALLERSON</h4>
             <p> 27th DECEMBER 2017 <br>
                 EC2A 3BS <br>
                 £15.00 <br>
             <a href=Buy.php>B U Y   N O W !</a></p>
             </div>
             <div class="events_3" style="background-image: url('https://2.bp.blogspot.com/-cpASClptcn8/WBxKZlX2yPI/AAAAAAAAG5I/xPREwqBtpgceV4TkJ6haEOoTCKEkF0JkgCLcB/s1600/gods%2Bown%2Bjunkyard%2Bwalthamstow%2Blondon.jpg')">
-            <h4 class="events_3">GOD'S OWN JUNKYARD</h4>
+            <h5 class="events_3">GOD'S OWN JUNKYARD</h5>
             <p> 23rd DECEMBER 2017 <br>
                 EC2A 3BS <br>
                 £10.00 <br>
