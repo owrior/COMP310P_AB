@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start()?>
 <html>
     <head>
         <title>Event's</title>
@@ -23,28 +24,41 @@
         </div>
          <div class='events_page_main'>
             <h1 class="events_page_main">WHAT'S ON?</h1>
-            <form class='events_page_main' method = 'post'>
-                <input type = 'text' name='event_name'>
-                <input type = 'text' name='category'>
-                <input type='date' name='date_from'>
-                <input type='date' name='date_to'>
-                <input type='submit' name='search'>
-            </form>
-            <?php 
-            require 'eventsSearch.php'; 
-            searchEvents();
-            while($row = mysql_fetch_array($results)) {?>
-            <tr>
-                    <td><?php echo $row['Event_Name']?></td>
-                    <td><?php echo $row['Event_Date']?></td>
-                    <td><?php echo $row['TicketSaleEnd_Date']?></td>
-                    <td><?php echo $row['Categories.Category_Name']?></td>
-                    <td><?php echo $row['Event_Capacity']?></td>
-            </tr>
-            <?php 
-            }?>
-             
-        </div>
+            <div class='events_page_search'>
+                <form class='events_page_main' method = 'post' action='/Controller/eventsSearch.php'>
+                    <input type = 'text' name='event_name' value='' placeholder="Event Name">
+                    <input type = 'text' name='category' value='' placeholder="Event Category">
+                    <input type='date' name='date_from' value='2017-01-01' placeholder='Date From'>
+                    <input type='date' name='date_to' value=NULL placeholder="Date To">
+                    <input type='submit' name='search'>
+                </form>
+            </div>
+            <div class='events_page_results'>
+                <table border="2" style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Ticket Sale final release</th>
+                            <th>Category</th>
+                            <td>Capacity</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php $results = $_SESSION['searchResults'];
+                    while($row = mysql_fetch_array($results)){?>
+                    <tr>
+                            <td><?php echo $row['Event_Name'];?></td>
+                            <td><?php echo $row['Event_Date'];?></td>
+                            <td><?php echo $row['TicketSaleEnd_Date'];?></td>
+                            <td><?php echo $row['Categories.Category_Name'];?></td>
+                            <td><?php echo $row['Event_Capacity'];?></td>
+                    </tr>
+                    <?php }?>
+                    </tbody>
+                </table>
+            </div>
+         </div>
         <div class='events_page_sidebar_1'>
             <h2 class='events_page_sidebar_1'>Event's <br>You're Attending...</h2>
             <ul>

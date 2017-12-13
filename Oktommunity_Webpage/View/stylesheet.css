@@ -226,8 +226,11 @@
                 margin: 5px;
                 padding: 0% 5% 0% 5%;
             }
-            input.events_page_main{
-
+            div.events_page_search {
+                height:20%;
+            }
+            div.events_page_results {
+                height: 80%;
             }
             div.events_page_sidebar_1{
                 text-align: left;
