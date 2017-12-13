@@ -95,16 +95,14 @@
             <option value="0">Choose</option>
             <option value="1">Brewdog</option>
             <option value="2">Camden Town Brewery</option>
+            <option value="3">Chinz</option>
             </select>
         </div>
-        
-        
-    
 
 	<br></br>
 
 	<div class="eventCreation">
-	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">
+	<input type="submit" name="submit" value="Submit" >
         </div>
         
         </form>
@@ -112,7 +110,7 @@
         </div>
         
             <div class="eventSupplier">
-            
+            <form method="post" action="/Controller/PageSupplierValidation.php">
             <h3>New Supplier?</h4>
             
             <p>Make sure to register here</p>  
@@ -122,10 +120,10 @@
             </div>
             
             <div>
-                <select name="Type_ID">
+                <select name="Type">
                 <option value="0">Type</option>
-                <option value="1">1</option>
-                <option value="2">1</option>
+                <option value="1">Specialised in ales and stouts. </option>
+                <option value="2">Specialised in pale ales.</option>
                 </select>
             </div>
             
@@ -134,7 +132,7 @@
             </div>
 
             <div>
-                <input type="number" placeholder="Phone Number" name="Phone"/>
+                <input type="number" placeholder="Phone Number" name="Phone_Number"/>
             </div>
  
             <div>
@@ -149,6 +147,9 @@
 	<input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg">
         </div>
             
+            <p>It'll take a little while for us to evaluate the supplier and get back to you, please add them under the control section.</p>
+            <p>Thank you</p>
+            </form>
 
             
             </div>
