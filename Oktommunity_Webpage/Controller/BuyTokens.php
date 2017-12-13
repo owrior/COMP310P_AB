@@ -7,7 +7,7 @@ function getUserID($email) {
     $connection = connect();
     $customer_ID_query = "SELECT Customer_ID FROM Customer WHERE Email ='$email'";
     $result = mysqli_query($connection, $customer_ID_query);
-    $Customer_ID_Array[] = mysqli_fetch_array($result);
+    $Customer_ID_Array = mysqli_fetch_array($result);
     $Customer_ID = $Customer_ID_Array[0];
     disconnect($connection);
     return $Customer_ID;
@@ -34,15 +34,18 @@ function TokenTypeDropDown() {
 if (!$_SESSION["email"]) {
     header("/View/LoggedOutAccessible/Login");
 }
+
 else{
     $Type = $_POST['chosen_type'];
     $Amount = $_POST['Amount'];
     $email = $_SESSION['email'];
 }
+
 if ($Type == 0) {
     $_SESSION['error_message_1'] = "Please select a type";
     header('location: /View/LoggedInAccessible/Tokens.php');
 }
+
 else {
     if ($Amount == 0) {
         $_SESSION['error_message_2'] = "Please select an Amount";
