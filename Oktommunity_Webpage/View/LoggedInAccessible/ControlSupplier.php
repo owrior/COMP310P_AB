@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start() ?>
 <html>
     <head>
-        <title>Tokens</title>
+        <title>CONTROL</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
@@ -31,26 +31,8 @@
                 <li class='navigation_control'><a href=Control.php>Control</a></li>
             </ul>
         </div>
-        <div class='tokens_page_main'style="background-image: url('/Images/token.JPG'); float: left; ">
-            <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
-            <div>
-            <form method="post" action="BuyTokens.php">
-            <label>Which type of token would you like to buy?</label>
-            <select class="form-dropdown" style="width:150px" id="input_5" name="q5_listOf">
-            <?php require 'connect.php';
-            $connection = connect();
-            $filter = mysqli_query($connection, 'SELECT Type FROM TokenType');
-            while ($row = mysqli_fetch_array($filter)) {
-                $menu  = '<option>' .$row('dropdown_option').'</option>';
-            }
-            $menu = '</select></form>';
-            echo $menu;
-            ?>
-            </select>
-            <input type="submit" value="submit">
-            </form>
-            </div>
+         <div class='control_page_main'>
+        <h3 class="control_page_main">Control</h3>
         </div>
-        
     </body>
 </html>
