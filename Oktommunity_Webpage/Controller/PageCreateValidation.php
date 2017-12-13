@@ -1,5 +1,6 @@
 <?php
 require 'connect.php';
+require 'data_tester';
 $connection = connect();
 
 	if($_POST['submit']){
@@ -33,12 +34,12 @@ $connection = connect();
             echo $result;
             }
         else{
-            $Event_Name = $_POST['Event_Name'];
-            $Location_ID = $_POST['Location_ID'];
-            $Event_Date = $_POST['Event_Date'];
-            $TicketSaleEnd_Date = $_POST['TicketSaleEnd_Date'];
-            $Event_Capacity = $_POST['Event_Capacity'];
-            $Description = $_POST['Description'];
+            $Event_Name = testData($_POST['Event_Name']);
+            $Location_ID = testData($_POST['Location_ID']);
+            $Event_Date = testData($_POST['Event_Date']);
+            $TicketSaleEnd_Date = testData($_POST['TicketSaleEnd_Date']);
+            $Event_Capacity = testData($_POST['Event_Capacity']);
+            $Description = testData($_POST['Description']);
             $query="INSERT INTO event (Event_Name, Location_ID, Event_Date, TicketSaleEnd_Date, Event_Capacity, Description, Category, Supplier) VALUES 
                     ('$Event_Name', '$Location_ID','$Event_Date', '$TicketSaleEnd_Date', '$Event_Capacity', '$Description','$Category','$Supplier')";
             mysqli_query($connection, $query);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start();?>
 <html>
     <head>
         <title>Event's</title>
@@ -35,29 +35,23 @@
             </div>
             <div class='events_page_results'>
                 <table border="2" style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
-                    <thead>
-                        <tr>
-                            <th>Event ID</th>
-                            <th>Event</th>
-                            <th>Date</th>
-                            <th>Ticket Sale final release</th>
-                            <th>Category</th>
-                            <td>Capacity</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php $results = $_SESSION['searchResults'];
-                    while($row = mysql_fetch_array($results)){?>
                     <tr>
-                            <td><?php echo $row['Event.Event_ID']?></td>
-                            <td><?php echo $row['Event_Name']?></td>
-                            <td><?php echo $row['Event_Date']?></td>
-                            <td><?php echo $row['TicketSaleEnd_Date']?></td>
-                            <td><?php echo $row['Categories.Category_Name']?></td>
-                            <td><?php echo $row['Event_Capacity']?></td>
+                        <th>Event ID</th>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Ticket Sale final release</th>
+                        <th>Category</th>
+                        <td>Capacity</td>
                     </tr>
-                    <?php }?>
-                    </tbody>
+                    <?php if (!$_SESSION['searchResults']) {
+                    } 
+                    else {
+                    $results = $_SESSION['searchResults'];
+                    while($row = mysqli_fetch_array($results)){
+                    echo '<tr><td>' . $row['Event_ID'] . '</td><td>' . $row['Event_Name'] . '</td><td>' . $row['Event_Date'] . '</td><td>' . $row['TicketSaleEnd_Date'] . '</td><td>' . $row['Category_Name'] . '</td><td>' . $row['Event_Capacity'] . '</td></tr>';
+                     }
+                     var_dump($_SESSION['searchResults']);
+                    }?>
                 </table>
             </div>
          </div>

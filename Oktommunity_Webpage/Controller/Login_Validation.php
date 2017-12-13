@@ -5,8 +5,8 @@
     session_start();
     
         
-        $email_entered = $_POST["email_entered"];
-        $password_entered = $_POST["password_entered"];
+        $email_entered = testData($_POST["email_entered"]);
+        $password_entered = testData($_POST["password_entered"]);
         
         $login_query = "SELECT Customer_ID FROM Customer WHERE Email = '$email_entered' AND Password = '$password_entered'";
         

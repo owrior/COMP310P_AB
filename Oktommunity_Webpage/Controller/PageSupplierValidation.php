@@ -1,5 +1,6 @@
 <?php
 require 'connect.php';
+require 'data_tester.php';
 $connection = connect();
 
 	if($_POST['submit']){
@@ -26,12 +27,12 @@ $connection = connect();
             echo $result;
             }
         else{
-            $Name = $_POST['Name'];
-            $Type = $_POST['Type'];
-            $Email = $_POST['Email'];
-            $Phone_Number = $_POST['Phone_Number'];
-            $Address = $_POST['Address'];
-            $Postcode = $_POST['Postcode'];
+            $Name = testData($_POST['Name']);
+            $Type = testData($_POST['Type']);
+            $Email = testData($_POST['Email']);
+            $Phone_Number = testData($_POST['Phone_Number']);
+            $Address = testData($_POST['Address']);
+            $Postcode = testData($_POST['Postcode']);
             $query="INSERT INTO supplier (Name, Type, Email, Phone_Number, Address, Postcode) VALUES 
                     ('$Name', '$Type','$Email', '$Phone_Number', '$Address','$Postcode')";
             mysqli_query($connection, $query);

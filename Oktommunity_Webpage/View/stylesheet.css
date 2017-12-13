@@ -227,10 +227,12 @@
                 padding: 0% 5% 0% 5%;
             }
             div.events_page_search {
-                height:20%;
+                height:5%;
+                
             }
             div.events_page_results {
-                height: 80%;
+                height: 95%;
+                float: left;
             }
             div.events_page_sidebar_1{
                 text-align: left;
