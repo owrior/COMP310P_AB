@@ -1,23 +1,19 @@
 <?php
 ini_set('display_errors',1);
-session_start();
-$connection = connect();
-$event_ID = testData($_GET['event_ID']);
 $event_info_query = 'SELECT Event_Name, Event_Date, TicketSaleEnd_Date, Event_Capacity, Event.Description, Location.Name, Location.Address, Location.Postcode FROM Event'
-        . ' JOIN Location.Location_ID ON Event.Location_ID'
+        . ' JOIN Location ON Event.Location_ID'
         . ' WHERE Event_ID = '.$event_ID;
 
-$results = mysqli_query($connect, $event_info_query);
-
+$results = mysqli_query($connection, $event_info_query);
 $row = mysqli_fetch_row($results);
-$event_name = $row['Event_Name'];
-$event_date = $row['Event_Date'];
-$ticket_sale_end = $row['TicketSaleEnd_Date'];
-$event_capacity = $row['Event_Capacity'];
-$event_description = $row['Description'];
-$location_name = $row['Name'];
-$location_address = $row['Address'];
-$location_postcode = $row['Postcode'];
+$event_name = $row[0];
+$event_date = $row[1];
+$ticket_sale_end = $row[2];
+$event_capacity = $row[3];
+$event_description = $row[4];
+$location_name = $row[5];
+$location_address = $row[6];
+$location_postcode = $row[7];
 ?>
 
 <ul>
@@ -32,6 +28,3 @@ $location_postcode = $row['Postcode'];
 </ul>
 <?php 
 disconnect($connection); ?>
-
-
-

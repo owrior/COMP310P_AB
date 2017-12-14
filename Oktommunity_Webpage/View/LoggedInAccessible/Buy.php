@@ -32,5 +32,5 @@
             </ul>
         </div>
         <div class="main">
-            <?php include('ticket_purchase.php');?>
+            <?php include('../Controller/ticket_purchase.php');?>
         </div>
