@@ -12,6 +12,8 @@
         $login_query = "SELECT Customer_ID FROM Customer WHERE Email = '$email_entered' AND Password = '$password_entered'";
         
         $result = mysqli_query($connection,$login_query);
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['loginID'] = $row['Customer_ID'];
         
         $count = mysqli_num_rows($result);
 

@@ -31,6 +31,6 @@
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
             </ul>
         </div>
-        <div>
+        <div class="main">
             <?php include('../Controller/ticket_purchase.php');?>
         </div>
