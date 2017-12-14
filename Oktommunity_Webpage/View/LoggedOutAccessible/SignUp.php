@@ -30,10 +30,11 @@
             <label>L A S T  N A M E : </label><input type="password" name="password_entered" id="LastName_entered"><br>
             <label>E M A I L : </label><input type="text" name="email_entered" id="Email_entered"><br>
             <label>P A S S W O R D : </label><input type="password" name="password_entered" id="password_entered"><br>
-            <label>A D D R E S S : </label><input type="text" name="email_entered" id="Address_entered"><br>
-            <label>P O S T  C O D E : </label><input type="password" name="password_entered" id="PostCode_entered"><br>
-            <label>D A T E  O F  B I R T H : </label><input type="password" name="password_entered" id="DOB_entered"><br>
-            <label>P H O N E  N U M B E R : </label><input type="password" name="password_entered" id="PhoneNo_entered"><br>
+            <label>D A T E  O F  B I R T H : </label><input type="password" name="DOB_entered" id="DOB_entered"><br>
+            <label>P H O N E  N U M B E R : </label><input type="password" name="phoneno_entered" id="PhoneNo_entered"><br>
+            <label>P O S T  C O D E : </label><input type="password" name="postcode_entered" id="PostCode_entered"><br>
+            <label>A D D R E S S : </label><textarea type="text" name="address_entered" rows="5" cols="40" id="Address_entered"></textarea><br>
+            
             <input type='Submit' value='R E G I S T E R'>
         </form>
         </div>
