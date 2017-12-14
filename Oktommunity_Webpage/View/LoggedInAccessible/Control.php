@@ -84,7 +84,7 @@
                 </div>
         
         <div class ="eventHosted">
-            <h>EVENTS YOU ARE </h>
+            <h>EVENTS YOU ARE HOSTED</h>
             <table>
             <tr>
                 <td style = "width:100px">Event Nmae</td>
