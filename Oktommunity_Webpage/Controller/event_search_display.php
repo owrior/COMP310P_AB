@@ -85,4 +85,5 @@ if ($event_name == '') {
         </tr>
         <?php
    }
-   disconnect($connection)?>
+   disconnect($connection);
+?>      

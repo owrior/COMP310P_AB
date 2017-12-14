@@ -17,8 +17,8 @@
         <br>
         <div class='navigation_control'>
             <ul class='navigation_control'>
-                <li class='navigation_control'><a href=index.php>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href=Events.php>Events</a></li>
+                <li class='navigation_control'><a href='View/LoggedOutAccessible/index.php'>OKTOMUNITY</a></li>
+                <li class='navigation_control'><a href='View/LoggedOutAccessible/Events.php'>Events</a></li>
             </ul>
         </div>
          <div class='events_page_main'>
