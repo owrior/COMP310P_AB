@@ -30,10 +30,10 @@ $Password =  testData($_POST["Password_entered"]);
 
        if ($conn->query($sign) === TRUE) {
                  echo "New record created successfully";
-        } 
+            } 
         else {
                 echo "Error" . $sign . "<br>" . $conn->error;
                 $conn->close();
+            }
         }
-        
         
