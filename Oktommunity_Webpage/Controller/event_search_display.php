@@ -57,13 +57,16 @@ if ($event_name == '') {
             <td>
                 <?php echo $event_name;?>
             </td>
-            <?php} else { ?>
+            <?php} 
+            else { ?>
             <td>
-                <a href='/View/LoggedInAccessible/Buy.php'>
-                <?php echo $event_name;?>
-                </a>
+                <?php 
+                echo '<a href="/View/LoggedInAccessible/Buy.php">';
+                echo $event_name;
+                echo '</a>';
+                ?>
             </td>
-            <?php }?>
+            <?php}?>
             <td>
                 <?php echo $location_ID;?>
             </td>
