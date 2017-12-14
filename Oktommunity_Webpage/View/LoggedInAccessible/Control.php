@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+
 <?php 
-    //require('/Controller/connect.php');
+    //require ('../Controller/connect.php');
         function connect(){
             $dbhost = 'localhost';
             $dbuser = 'root';

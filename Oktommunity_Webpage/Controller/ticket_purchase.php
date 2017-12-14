@@ -1,11 +1,11 @@
 <?php
-//ini_set('display_errors',1);
+ini_set('display_errors',1);
 session_start();
 $connection = connect();
-$event_ID = $_SESSION['event_ID'];
+$event_ID = testData($_GET['event_ID']);
 $event_info_query = 'SELECT Event_Name, Event_Date, TicketSaleEnd_Date, Event_Capacity, Event.Description, Location.Name, Location.Address, Location.Postcode FROM Event'
-        . 'JOIN Location.Location_ID ON Event.Location_ID'
-        . 'WHERE Event_ID = '.$event_ID;
+        . ' JOIN Location.Location_ID ON Event.Location_ID'
+        . ' WHERE Event_ID = '.$event_ID;
 
 $results = mysqli_query($connect, $event_info_query);
 
