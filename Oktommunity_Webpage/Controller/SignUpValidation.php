@@ -23,15 +23,17 @@ $Password =  testData($_POST["Password_entered"]);
         }
         else {
              disconnect($connection);
-               $sql = "INSERT INTO Customer WHERE Email = $email_entered AND First_Name = $FirstName AND Last_Name=$LastName
+               $sign = "INSERT INTO Customer WHERE Email = $email_entered AND First_Name = $FirstName AND Last_Name=$LastName
                         AND email=$email_entered AND DOB=$DOB AND Phone_Number=$PhoneNo AND Postcode=$PostCode  
                         AND Address=$Address AND Password=$Password";
                
 
-       if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-        } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-    disconnect($connection);
-}
-
+       if ($conn->query($sign) === TRUE) {
+                 echo "New record created successfully";
+        } 
+        else {
+                echo "Error" . $sign . "<br>" . $conn->error;
+                $conn->close();
+        }
+        
+        
