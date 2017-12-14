@@ -48,7 +48,7 @@
             </div>
          </div>
         <div class='events_page_sidebar_1'>
-            <h2 class='events_page_sidebar_1'>Event's <br>You're Attending...</h2>
+            <h2 class='events_page_sidebar_1'>Upcoming Event's</h2>
             <ul>
                 <li>Event 1</li>
                 <li>Event 2</li>
