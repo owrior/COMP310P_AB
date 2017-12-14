@@ -28,7 +28,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>'
-    <body style="background-image:url('https://ak8.picdn.net/shutterstock/videos/18465028/thumb/1.jpg')">
+    <body style="background-image:url('https://cdn.vectorstock.com/i/thumb-large/89/11/seamless-floral-pattern-vector-13598911.jpg')">
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
