@@ -1,5 +1,6 @@
 
-<?php session_start() ?>
+<?php session_start();?>
+
 <html>
     <head>
         <title>Event's</title>
@@ -8,14 +9,13 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body>
+        <?php if (isset($_SESSION['email'])) {
+                echo "please log in to view this page";
+                echo "<p><a href=Login.php>Login</a></p>";
+                } ?>
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
-            if ($_SESSION['email'] == NULL) {
-                echo 'User';
-            }
-            else {
                 echo $_SESSION['email'];
-            }
             ?></button>
             <div class = 'login_control_content'>
                 <a href='/Controller/LogOut.php'>Log Out</a>
@@ -30,5 +30,8 @@
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Create.php'>Create</a></li>
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
             </ul>
+        </div>
+        <div>
+            
         </div>
         <div action='/Controller/Event_info_retrieval.php'

@@ -24,11 +24,11 @@ class TableRows extends RecursiveIteratorIterator {
     session_start();
     
         
-        $eventID_entered =testData($POST["eventID_entered"]) ;
+        $eventID_entered = $_SESSION["eventID"];
        
         
         $event_retrieval = "SELECT Event_Name, Event_Capacity , Description, TicketSaleEnd_Date , Location.Address, Location.Postcode
-                FROM Event LEFT JOIN Location ON Event.Location_ID WHERE Event_ID ='$eventID_entered'";
+                FROM Event LEFT JOIN Location ON Event.Location_ID WHERE Event_ID ='$eventID'";
         $result = mysqli_query($connection,$event_retrieval_query) ->setFetchMode(PDO::FETCH_ASSOC); 
         foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
         echo $v;

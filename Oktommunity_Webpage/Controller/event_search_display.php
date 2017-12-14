@@ -40,6 +40,7 @@ if ($event_name == '') {
             . " WHERE $event_name_query $date_query $category_query";
     $results  = mysqli_query($connection, $event_search_query);
     
+    $count = 1;
     while($row = mysqli_fetch_assoc($results)){
         $event_ID = $row['Event_ID'];
         $event_name = $row['Event_Name'];
@@ -51,10 +52,14 @@ if ($event_name == '') {
         ?>
         <tr>
             <td>
+                <?php echo $count;?>
+            </td>
+            <td>
                 <?php echo $event_ID;?>
             </td>
             <td>
                 <?php
+                $_SESSION['event_ID_'.$count] = $event_ID;
                 echo '<a href="/View/LoggedInAccessible/Buy.php">';
                 echo $event_name;
                 echo '</a>';?>
@@ -76,5 +81,5 @@ if ($event_name == '') {
             </td>
         </tr>
         <?php
-   }
+   $count++;}
 disconnect($connection); ?> 
