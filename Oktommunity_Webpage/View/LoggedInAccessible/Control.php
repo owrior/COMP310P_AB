@@ -8,8 +8,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
-    </head>
-    <body>
+    </head>'
+    <body style="background-image:url('https://ak8.picdn.net/shutterstock/videos/18465028/thumb/1.jpg')">
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
