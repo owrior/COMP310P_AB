@@ -1,6 +1,7 @@
 <?php
     ini_set('display_errors', 1);
     require('connect.php');
+    require('data_tester.php');
     $connection = connect();
     session_start();
     
