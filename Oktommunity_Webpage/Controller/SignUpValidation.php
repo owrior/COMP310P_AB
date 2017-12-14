@@ -1,5 +1,7 @@
 <?php
+ini_set('display_errors',1);
 require'connect.php';
+require 'data_tester.php';
 $connection = connect();
 
 $email_entered = testData($_POST["Email_entered"]);
@@ -23,17 +25,18 @@ $Password =  testData($_POST["Password_entered"]);
         }
         else {
              disconnect($connection);
-               $sign = "INSERT INTO Customer WHERE Email = $email_entered AND First_Name = $FirstName AND Last_Name=$LastName
-                        AND email=$email_entered AND DOB=$DOB AND Phone_Number=$PhoneNo AND Postcode=$PostCode  
-                        AND Address=$Address AND Password=$Password";
+               $sign = "INSERT INTO Customer (Email,First_Name, Last_Name, DOB, Phone_Number, Postcode,Address, Password) VALUES('$email_entered' , '$FirstName' , '$LastName',
+                        $DOB , $PhoneNo , '$PostCode' ,'$Address' , '$Password')";
                
 
-       if ($conn->query($sign) === TRUE) {
+       if ($sign === TRUE) {
+           disconnect($connection);
                  echo "New record created successfully";
             } 
         else {
-                echo "Error" . $sign . "<br>" . $conn->error;
-                $conn->close();
+                disconnect($connection);
+                echo "Error" . $sign . "<br>"  ;
+                
             }
         }
         
