@@ -32,5 +32,8 @@
             </ul>
         </div>
         <div class="main">
-            <?php include('../Controller/ticket_purchase.php');?>
+            <?php include('../Controller/ticket_info.php');?>
+            <form>
+            <button action="ticket_purchase.php" value="<?php echo $event_ID?>">BUY</button>
+            </form>
         </div>

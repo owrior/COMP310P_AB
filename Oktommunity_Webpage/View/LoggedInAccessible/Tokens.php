@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start();
+include '../Controller/BuyTokens'?>
 <html>
     <head>
         <title>Tokens</title>
@@ -54,9 +55,7 @@
                         </br>
                         <label>Which type would you like?</label>                    
                         <select name ="chosen_type">
-                            <option value="0">Choose which kind</option>
-                            <option value="1">Drinks</option>
-                            <option value="2">Food</option>
+                            <?php include '../Controller/token_dropdown.php'?>
                         </select>                         
                         </br>
                         <?php if (!$_SESSION['error_message_2']) {
