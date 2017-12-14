@@ -32,6 +32,13 @@
             </ul>
         </div>
         <div>
-            
+            <table>
+                <tr>
+                    <td><label>Event Name :</label></td>
+                    <td><label>Event Date :</label></td>
+                    <td><label>Event Location :</label></td>
+                    <td><label>Remaining Tickets :</label></td>
+                </tr>
+            </table>
         </div>
         <div action='/Controller/Event_info_retrieval.php'

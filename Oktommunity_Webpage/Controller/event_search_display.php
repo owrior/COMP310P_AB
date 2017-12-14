@@ -55,14 +55,15 @@ if ($event_name == '') {
                 <?php echo $count;?>
             </td>
             <td>
-                <?php echo $event_ID;?>
+                <?php
+                echo '<form method = POST action = "/Controller/ticket_redirect_analysis.php">';
+                echo '<input type = "hidden" name = "event_ID" value = "'.$event_ID.'">';
+                echo '<input type = "submit" value= "BUY">';
+                echo '</form>';
+                ?>
             </td>
             <td>
-                <?php
-                $_SESSION['event_ID_'.$count] = $event_ID;
-                echo '<a href="/View/LoggedInAccessible/Buy.php">';
-                echo $event_name;
-                echo '</a>';?>
+                <?php echo $event_name;?>
             </td>
             <td>
                 <?php echo $location_ID;?>
