@@ -1,37 +1,28 @@
 <?php
-ini_set('display_errors', 1);
-session_start();
-require 'connect.php';
-require 'data_tester.php';
 
-   $connection = connect();
-   $event_name = testData($_POST['event_name']);
-   $category = testData($_POST['category']);
-   $event_date_from = testData($_POST['date_from']);
-   $event_date_to = testData($_POST['date_to']);
-   if ($event_name == '') {
+if ($event_name == '') {
        $event_name_query = "";
    }
    else {
-       $event_name_query = "Event_Name LIKE $event_name,";
+       $event_name_query = "Event_Name LIKE '%$event_name%' AND";
    }
    if ($category == '') {
        $category_query = "";
    }
    else {
-       $category_query = "Category_Name LIKE $category";
+       $category_query = "Category_Name LIKE '%$category%',";
    }
    if ($event_date_to && $event_date_from == NULL) {
        $date_query = "";
    }
    elseif ($event_date_to == NULL && !$category_query =="") {
-       $date_query = "$event_date_from < Event_Date,";
+       $date_query = "$event_date_from < Event_Date AND";
    }
    elseif ($event_date_from == NULL && !$category_query =="") {
-       $date_query = "Event_Date < $event_date_to,";
+       $date_query = "Event_Date < $event_date_to AND";
    }
    elseif ($event_date_from && $event_date_to =! NULL && !$category_query =="") {
-       $date_query = "$event_date_from < Event_Date < $event_date_to,";
+       $date_query = "$event_date_from < Event_Date < $event_date_to AND";
    }
    elseif ($event_date_to == NULL && $category_query == "") {
        $date_query = "$event_date_from < Event_Date";
@@ -47,7 +38,7 @@ require 'data_tester.php';
             . "JOIN CategoryEvent ON Event.Event_ID"
             . " JOIN Categories ON CategoryEvent.Category_ID"
             . " WHERE $event_name_query $date_query $category_query";
-    
+    var_dump($event_search_query);
     $results  = mysqli_query($connection, $event_search_query);
     
     while($row = mysqli_fetch_assoc($results)){
@@ -60,15 +51,28 @@ require 'data_tester.php';
         $category = $row['Category_Name'];
         ?>
         <tr>
-            <td><?php echo $event_ID?></td>
-            <td><?php echo $event_name?></td>
-            <td><?php echo $location_ID?></td>
-            <td><?php echo $event_date?></td>
-            <td><?php echo $ticket_sale_end?></td>
-            <td><?php echo $event_capacity?></td>
-            <td><?php echo $category?></td>
+            <td>
+                <?php echo $event_ID;?>
+            </td>
+            <td>
+                <?php echo $event_name;?>
+            </td>
+            <td>
+                <?php echo $location_ID;?>
+            </td>
+            <td>
+                <?php echo $event_date;?>
+            </td>
+            <td>
+                <?php echo $ticket_sale_end;?>
+            </td>
+            <td>
+                <?php echo $event_capacity;?>
+            </td>
+            <td>
+                <?php echo $category;?>
+            </td>
         </tr>
         <?php
    }
-   disconnect($connection);
-   ?>
+   disconnect($connection)?>
