@@ -53,20 +53,12 @@ if ($event_name == '') {
             <td>
                 <?php echo $event_ID;?>
             </td>
-            <?php if (!$_SESSION['email']) {?>
             <td>
-                <?php echo $event_name;?>
-            </td>
-            <?php} 
-            else { ?>
-            <td>
-                <?php 
+                <?php
                 echo '<a href="/View/LoggedInAccessible/Buy.php">';
                 echo $event_name;
-                echo '</a>';
-                ?>
+                echo '</a>';?>
             </td>
-            <?php}?>
             <td>
                 <?php echo $location_ID;?>
             </td>
@@ -85,5 +77,4 @@ if ($event_name == '') {
         </tr>
         <?php
    }
-   disconnect($connection);
-?>      
+disconnect($connection); ?> 
