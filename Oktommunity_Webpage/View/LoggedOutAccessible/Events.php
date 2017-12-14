@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php session_start();?>
 <html>
     <head>
         <title>Event's</title>
@@ -25,33 +24,26 @@
          <div class='events_page_main'>
             <h1 class="events_page_main">WHAT'S ON?</h1>
             <div class='events_page_search'>
-                <form class='events_page_main' method = 'post' action='/Controller/eventsSearch.php'>
+                <form class='events_page_main' method = 'post' action='/Controller/events_search.php'>
                     <input type = 'text' name='event_name' value='' placeholder="Event Name">
                     <input type = 'text' name='category' value='' placeholder="Event Category">
-                    <input type='date' name='date_from' value='2017-01-01' placeholder='Date From'>
-                    <input type='date' name='date_to' value=NULL placeholder="Date To">
-                    <input type='submit' name='search'>
+                    <input type='date' name='event_date_from' value='2017-01-01' placeholder='Date From'>
+                    <input type='date' name='event_date_to' value=NULL placeholder="Date To">
+                    <button>Search</button>
                 </form>
             </div>
             <div class='events_page_results'>
-                <table border="2" style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
+                <table border="2" width=1140px style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
                     <tr>
-                        <th>Event ID</th>
-                        <th>Event</th>
-                        <th>Date</th>
-                        <th>Ticket Sale final release</th>
-                        <th>Category</th>
-                        <td>Capacity</td>
+                        <td><label>Event ID :</label></td>
+                        <td><label>Event :</label></td>
+                        <td><label>Location ID :</label></td>
+                        <td><label>Event Date :</label></td>
+                        <td><label>Ticket Sale final release :</label></td>
+                        <td><label>Capacity :</label></td>
+                        <td><label>Category :</label></td>
                     </tr>
-                    <?php if (!$_SESSION['searchResults']) {
-                    } 
-                    else {
-                    $results = $_SESSION['searchResults'];
-                    while($row = mysqli_fetch_array($results)){
-                    echo '<tr><td>' . $row['Event_ID'] . '</td><td>' . $row['Event_Name'] . '</td><td>' . $row['Event_Date'] . '</td><td>' . $row['TicketSaleEnd_Date'] . '</td><td>' . $row['Category_Name'] . '</td><td>' . $row['Event_Capacity'] . '</td></tr>';
-                     }
-                     var_dump($_SESSION['searchResults']);
-                    }?>
+                    <?php include('../Controller/event_search_display.php');?>
                 </table>
             </div>
          </div>
