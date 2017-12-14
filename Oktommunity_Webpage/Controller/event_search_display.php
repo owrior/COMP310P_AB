@@ -53,9 +53,17 @@ if ($event_name == '') {
             <td>
                 <?php echo $event_ID;?>
             </td>
+            <?php if (!$_SESSION['email']) {?>
             <td>
                 <?php echo $event_name;?>
             </td>
+            <?php} else { ?>
+            <td>
+                <a href='/View/LoggedInAccessible/Buy.php'>
+                <?php echo $event_name;?>
+                </a>
+            </td>
+            <?php }?>
             <td>
                 <?php echo $location_ID;?>
             </td>
