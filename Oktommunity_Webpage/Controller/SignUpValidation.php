@@ -2,7 +2,7 @@
 require'connect.php';
 $connection = connect();
 
-$email_entered = testData($_POST["email_entered"]);
+$email_entered = testData($_POST["Email_entered"]);
 $FirstName =  testData($_POST["FirstName_entered"]);
 $LastName =  testData($_POST["LastName_entered"]);
 $DOB =  testData($_POST["DOB_entered"]);
