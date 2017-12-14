@@ -1,8 +1,8 @@
 <?php
 ini_set('display_errors', 1);
-require 'connect.php';
+include 'connect.php';
+$connection = connect();
 session_start();
-
 function getUserID($email) {
     $connection = connect();
     $customer_ID_query = "SELECT Customer_ID FROM Customer WHERE Email ='$email'";

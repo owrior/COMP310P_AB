@@ -66,23 +66,23 @@
             <?php 
             if(1==1){
                 $OwnerID = $_SESSION['loginID'];
-             $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID'";
-        $result = mysqli_query($connection,$event_query);
-        while($row = mysqli_fetch_assoc($result)){
+                $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID'";
+                $result = mysqli_query($connection,$event_query);
+            while($row = mysqli_fetch_assoc($result)){
             
-            $name = $row[Event_Name];
-            $Date = $row[Event_Date];
-            $Location = $row[Location_ID];
-            $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
-            $result2 = mysqli_query($connection,$location_query);
-            $row2 = mysqli_fetch_assoc($result2);
-            $locationName = $row2['Name'];
-            echo '<tr>';
-            echo '<td>'.$name.'</td>';
-            echo '<td>'.$Date.'</td>';
-            echo '<td>'.$locationName.'</td>';
-            echo'</tr>';
-            }}
+                $name = $row[Event_Name];
+                $Date = $row[Event_Date];
+                $Location = $row[Location_ID];
+                $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
+                $result2 = mysqli_query($connection,$location_query);
+                $row2 = mysqli_fetch_assoc($result2);
+                $locationName = $row2['Name'];
+                echo '<tr>';
+                echo '<td>'.$name.'</td>';
+                echo '<td>'.$Date.'</td>';
+                echo '<td>'.$locationName.'</td>';
+                echo'</tr>';
+                }}
             ?>
             </table>
                 

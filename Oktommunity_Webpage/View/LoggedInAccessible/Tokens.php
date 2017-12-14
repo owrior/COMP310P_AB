@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<?php session_start();
-include '../Controller/BuyTokens'?>
+
+<?php session_start();?>
 <html>
     <head>
         <title>Tokens</title>
@@ -36,7 +35,6 @@ include '../Controller/BuyTokens'?>
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
             <div class="token_form">
                 <form method="post" action="/Controller/BuyTokens.php">
-                    <div>
                         <label>How many would you like to buy?</label>
                         <select name="Amount">
                             <option value="0">Choose how many</option>
@@ -55,7 +53,7 @@ include '../Controller/BuyTokens'?>
                         </br>
                         <label>Which type would you like?</label>                    
                         <select name ="chosen_type">
-                            <?php include '../Controller/token_dropdown.php'?>
+                            <option value="1">Alcoholic</option>
                         </select>                         
                         </br>
                         <?php if (!$_SESSION['error_message_2']) {
@@ -66,7 +64,6 @@ include '../Controller/BuyTokens'?>
                         </br>
                         <input type="submit" value="BUY">
                         </br>
-                    </div>
                 </form>
             </div>
         </div>
