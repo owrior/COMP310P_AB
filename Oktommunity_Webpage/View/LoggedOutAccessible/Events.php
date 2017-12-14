@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start();?>
+<?php session_start()?>
 <html>
     <head>
         <title>Event's</title>
@@ -36,22 +36,14 @@
             <div class='events_page_results'>
                 <table border="2" style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
                     <tr>
-                        <th>Event ID</th>
-                        <th>Event</th>
-                        <th>Date</th>
-                        <th>Ticket Sale final release</th>
-                        <th>Category</th>
-                        <td>Capacity</td>
+                        <td><label>Event ID :</label></td>
+                        <td><label>Event :</label></td>
+                        <td><label>Date</label></td>
+                        <td><label>Ticket Sale final release :</label></td>
+                        <td><label>Category :</label></td>
+                        <td><label>Capacity :</label></td>
                     </tr>
-                    <?php if (!$_SESSION['searchResults']) {
-                    } 
-                    else {
-                    $results = $_SESSION['searchResults'];
-                    while($row = mysqli_fetch_array($results)){
-                    echo '<tr><td>' . $row['Event_ID'] . '</td><td>' . $row['Event_Name'] . '</td><td>' . $row['Event_Date'] . '</td><td>' . $row['TicketSaleEnd_Date'] . '</td><td>' . $row['Category_Name'] . '</td><td>' . $row['Event_Capacity'] . '</td></tr>';
-                     }
-                     var_dump($_SESSION['searchResults']);
-                    }?>
+                    <?php include('eventsSearch')?>
                 </table>
             </div>
          </div>
