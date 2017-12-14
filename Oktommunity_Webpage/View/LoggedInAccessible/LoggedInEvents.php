@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image:url('https://ak8.picdn.net/shutterstock/videos/16944148/thumb/1.jpg?i10c=img.resize(height:160)')">
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
@@ -31,7 +31,7 @@
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
             </ul>
         </div>
-         <div class='events_page_main'>
+         <div class='events_page_main' >
             <h1 class="events_page_main">WHAT'S ON?</h1>
             <div class='events_page_search'>
                 <form class='events_page_main' method = 'post' action='/Controller/events_search.php'>

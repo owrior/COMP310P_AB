@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image:url('http://blog.sklambert.com/wp-content/uploads/2012/09/bg.png')">
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
