@@ -32,6 +32,5 @@
             </ul>
         </div>
         <div>
-            <?php include '/Controller/ticket_purchase.php'?>
+            <?php include('../Controller/ticket_purchase.php');?>
         </div>
-        <div action='/Controller/Event_info_retrieval.php'

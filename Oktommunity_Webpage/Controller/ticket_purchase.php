@@ -20,7 +20,7 @@ $location_address = $row['Address'];
 $location_postcode = $row['Postcode'];
 ?>
 
-<ul>
+<ul style='background-color: blue;'>
     <li><?php echo 'Event Name: '.$event_name;?></li>
     <li><?php echo 'Event Date: '.$event_date;?></li>
     <li><?php echo 'Ticket Sale End: '.$ticket_sale_end;?></li>
