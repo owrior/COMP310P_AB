@@ -15,7 +15,7 @@
                 echo 'User';
             }
             else {
-                echo $_SESSION['email'];
+                echo $_SESSION['email'].'  '.$_SESSION['loginID'];
             }
             ?></button>
             <div class = 'login_control_content'>
