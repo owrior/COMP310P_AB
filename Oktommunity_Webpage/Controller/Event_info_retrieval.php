@@ -24,7 +24,7 @@ class TableRows extends RecursiveIteratorIterator {
     session_start();
     
         
-        $eventID_entered = $POST["eventID_entered"];
+        $eventID_entered =testData($POST["eventID_entered"]) ;
        
         
         $event_retrieval = "SELECT Event_Name, Event_Capacity , Description, TicketSaleEnd_Date , Location.Address, Location.Postcode
