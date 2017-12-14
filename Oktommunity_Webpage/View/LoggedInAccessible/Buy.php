@@ -9,7 +9,7 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body>
-        <?php if (isset($_SESSION['email'])) {
+        <?php if ($_SESSION['email'] == "Guest") {
                 echo "please log in to view this page";
                 echo "<p><a href=Login.php>Login</a></p>";
                 } ?>

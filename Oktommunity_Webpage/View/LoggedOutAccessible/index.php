@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php session_start();
+      $_SESSION['email'] = 'Guest';
+?>
 <html>
     <head>
         <title>Home Page</title>
