@@ -14,29 +14,19 @@ $Address =  testData($_POST["Address_entered"]);
 $Password =  testData($_POST["Password_entered"]);
 
         $SIGNUP_query = "SELECT Email FROM Customer WHERE Email = $email_entered";
-        
         $result = mysqli_query($connection,$SIGNUP_query);
-        
-        $count = mysqli_num_rows($result);
 
-        if ($count != 0) {
-            disconnect($connection);
+        if ($result == TRUE) {
             $_SESSION['errorMessge'] = "Email already in use, please use a different email.";   
         }
         else {
-             disconnect($connection);
                $sign = "INSERT INTO Customer (Email,First_Name, Last_Name, DOB, Phone_Number, Postcode,Address, Password) VALUES('$email_entered' , '$FirstName' , '$LastName',
-                        $DOB , $PhoneNo , '$PostCode' ,'$Address' , '$Password')";
+                        '$DOB' , $PhoneNo , '$PostCode' ,'$Address' , '$Password')";
                
-
-       if ($sign === TRUE) {
-           disconnect($connection);
-                 echo "New record created successfully";
-            } 
-        else {
-                disconnect($connection);
-                echo "Error" . $sign . "<br>"  ;
-                
-            }
+        $result = mysqli_query($connection, $sign);      
+        disconnect($connection);
+        header('location: /View/LoggedOutAccessible/Login.php');
         }
+        
+        
         
