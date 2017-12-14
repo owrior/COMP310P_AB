@@ -4,8 +4,9 @@
             $dbhost = 'localhost';
             $dbuser = 'root';
             $dbpass = 'root';
-            $dbname = 'Oktoberfest';
-            $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+            $dbname = 'oktober';
+            $dbport = '8888';
+            $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname,$dbport);
             if (!$connection) {
                 die('Error connecting to MySQL server.'.mysql_error());
             }
