@@ -59,7 +59,7 @@
             <h>EVENTS YOU ARE HOSTING</h>
             <table>
             <tr>
-                <td style = "width:100px">Event Nmae</td>
+                <td style = "width:100px">Event Name</td>
                 <td style = "width:100px">Event Date</td>
                 <td style = "width:100px">Location</td>
             </tr>
@@ -91,10 +91,10 @@
         </div>
         
         <div class ="eventHosted">
-            <h>EVENTS YOU ARE </h>
+            <h>EVENTS YOU HOSTED IN THE PAST</h>
             <table>
             <tr>
-                <td style = "width:100px">Event Nmae</td>
+                <td style = "width:100px">Event Name</td>
                 <td style = "width:100px">Event Date</td>
                 <td style = "width:100px">Location</td>
             </tr>
