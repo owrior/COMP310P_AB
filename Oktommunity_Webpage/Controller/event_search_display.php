@@ -38,7 +38,6 @@ if ($event_name == '') {
             . "JOIN CategoryEvent ON Event.Event_ID"
             . " JOIN Categories ON CategoryEvent.Category_ID"
             . " WHERE $event_name_query $date_query $category_query";
-    var_dump($event_search_query);
     $results  = mysqli_query($connection, $event_search_query);
     
     while($row = mysqli_fetch_assoc($results)){
