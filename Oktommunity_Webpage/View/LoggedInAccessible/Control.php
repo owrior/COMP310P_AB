@@ -46,16 +46,25 @@
             </tr>
             <?php 
             if(1==1){
-                require '/Controller/connect.php';
-                $connection = connect();
+                $dbhost = 'localhost';
+                $dbuser = 'root';
+                $dbpass = 'root';
+                $dbname = 'Oktoberfest';
+                $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                if (!$connection) {
+                    die('Error connecting to MySQL server.'.mysql_error());
+                }
+                else {
+                    return $connection;
+                }
                 $OwnerID = $_SESSION['loginID'];
                 $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID'";
                 $result = mysqli_query($connection,$event_query);
                 while($row = mysqli_fetch_assoc($result)){
 
-                    $name = $row[Event_Name];
-                    $Date = $row[Event_Date];
-                    $Location = $row[Location_ID];
+                    $name = $row['Event_Name'];
+                    $Date = $row['Event_Date'];
+                    $Location = $row['Location_ID'];
                     $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
                     $result2 = mysqli_query($connection,$location_query);
                     $row2 = mysqli_fetch_assoc($result2);
