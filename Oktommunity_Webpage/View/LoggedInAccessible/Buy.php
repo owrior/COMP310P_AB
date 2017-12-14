@@ -33,7 +33,12 @@
         </div>
         <div class="main">
             <?php include('../Controller/ticket_info.php');?>
-            <form>
-            <button action="ticket_purchase.php" value="<?php echo $event_ID?>">BUY</button>
+            <form method="POST"  action="ticket_purchase.php">
+                <select name = "ticket_type_ID">
+                    <option value="1">Adult Single</option>
+                    <option value="2">Child Single</option>
+                    <option value="3">Family Ticket</option>
+                </select>
+                <button value="<?php echo $event_ID;?>">BUY</button>
             </form>
         </div>

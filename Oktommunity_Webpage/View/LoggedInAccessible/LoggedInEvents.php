@@ -45,8 +45,8 @@
             <div class='events_page_results'>
                 <table border="2" width=1140px style= "background-color: #84ed86; color: #761a9b; margin: 0 auto;" >
                     <tr>
+                        <td><label>Number :</label></td>
                         <td><label>Event ID :</label></td>
-                        <td><label>Event :</label></td>
                         <td><label>Location ID :</label></td>
                         <td><label>Event Date :</label></td>
                         <td><label>Ticket Sale final release :</label></td>
