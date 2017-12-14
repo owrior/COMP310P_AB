@@ -401,14 +401,20 @@
                 text-align: center;
                 font-style: normal;
             }
-            div.eventHosted{
-             padding-left: 30%;   
+            div.eventHosting{
+             margin: 0 auto;  
              text-align: center;
                 font-style: italic;
                 font-size: 15px;   
             }
-            table.eventHosted{
-                text-align: center;
+            div.eventHosted{
+             margin: 0 auto;  
+             text-align: center;
+             font-style: italic;
+             font-size: 15px;   
+            }            
+            table{
+                margin: 0 auto;
             }
             /*Buy Page*/
             
