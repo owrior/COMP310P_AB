@@ -110,7 +110,7 @@
                 float:left;
                 height:100%;
                 width:84%; 
-                background-color: dimgray;
+                background-color: transparent;
             }
             h1.main{
                 padding: 0px;
@@ -122,18 +122,21 @@
             p.main{
                 text-align: center;
                 font-style: normal;
+                padding: 15px 15px 15px 15px;
             }
             div.sidebar{
                 float:right;
                 height:100%;
                 width:15.7%; 
-                background-color:#f2c391;
+                background-color:transparent;
+                border: 2px solid white ;
             }
             h2.sidebar{
                 padding: 30px 0px 0px 0px;
                 text-align: left;
                 font-style: italic;
                 font-size: 40px;
+                
             }
             li.sidebar{
                 float: right;
@@ -146,7 +149,7 @@
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: dimgray;
+                background-color: transparent;
                 padding: 0px;
                 margin: 0;
                 float: left;
@@ -207,7 +210,7 @@
                 text-align: center;
                 height:100%;
                 width:84%; 
-                background-color: #3f3f3e;
+                background-color: transparent;
                 float: left;            
             }
             h1.events_page_main{
@@ -238,7 +241,7 @@
                 text-align: left;
                 height: 50%;
                 width: 15.7%;
-                background-color:#f2c391;
+                background-color:transparent;
                 float: right;
             }
             h2.events_page_sidebar_1{
@@ -250,7 +253,7 @@
                 text-align: left;
                 height: 50%;
                 width: 15.7%;
-                background-color:#f2c391;
+                background-color:transparent;
                 float: right;
             }
             h2.events_page_sidebar_2{
@@ -334,7 +337,7 @@
                 height: 100%;
                 margin: 0;
                 width: 100%;
-                background-color: dimgray;
+                background-color: transparent;
                 float: left;
               
             }
@@ -370,7 +373,7 @@
                 margin: 0;
                 height:100%;
                 width:100%; 
-                background-color: dimgrey;
+                background-color: transparent;
                 float: left; 
             }
             h3.create_page_main{
@@ -383,7 +386,7 @@
                 text-align: center;
                 height:100%;
                 width:100%; 
-                background-color: dimgrey;
+                background-color: transparent;
                 float: left;
                 padding: 0px;
               
