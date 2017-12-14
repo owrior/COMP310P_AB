@@ -11,14 +11,14 @@
             <button class="login_control_btn">User</button>
             <div class = 'login_control_content'>
                 <a href='/View/LoggedOutAccessible/Login.php'>Login</a>
-                <a href='/View/LoggedOutAccessibleSignUp.php'>Sign Up</a>
+                <a href='/View/LoggedOutAccessible/SignUp.php'>Sign Up</a>
             </div>
         </div>
         <br>
         <div class='navigation_control'>
             <ul class='navigation_control'>
-                <li class='navigation_control'><a href='View/LoggedOutAccessible/index.php'>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href='View/LoggedOutAccessible/Events.php'>Events</a></li>
+                <li class='navigation_control'><a href='index.php'>OKTOMUNITY</a></li>
+                <li class='navigation_control'><a href='Events.php'>Events</a></li>
             </ul>
         </div>
          <div class='events_page_main'>
