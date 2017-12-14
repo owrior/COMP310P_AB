@@ -10,8 +10,8 @@
         <div class='login_control_dropdown'>
             <button class="login_control_btn">User</button>
             <div class = 'login_control_content'>
-                <a href=Login.php>Login</a>
-                <a href=SignUp.php>Sign Up</a>
+                <a href='/View/LoggedOutAccessible/Login.php'>Login</a>
+                <a href='/View/LoggedOutAccessibleSignUp.php'>Sign Up</a>
             </div>
         </div>
         <br>
