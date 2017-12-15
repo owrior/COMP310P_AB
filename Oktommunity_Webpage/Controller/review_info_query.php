@@ -1,5 +1,8 @@
 <?php
+session_start();
 ini_set('display_errors',1);
+$event_ID = $_SESSION['event_ID'];
+
 $event_info_query = 'SELECT Event_Name, Event_Date, TicketSaleEnd_Date, Event_Capacity, Event.Description, Location.Name, Location.Address, Location.Postcode FROM Event'
         . ' JOIN Location ON Event.Location_ID'
         . ' WHERE Event_ID = '.$event_ID;

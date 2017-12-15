@@ -1,4 +1,5 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php'?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php';
+session_start()?>
 <html>
     <head>
         <title>Event's</title>

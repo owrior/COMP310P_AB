@@ -19,4 +19,4 @@ $customer_ID =getUserID($_SESSION['email']);
 
 $review_insert_query = "INSERT INTO rating (Customer_ID, Event_ID, Rating) VALUES ('$customer_ID', '$event_ID', '$review_score')";
 mysqli_query($connection,$review_insert_query);
-header('location: ../View/LoggedInView/LoggedInEvents.php');
+header('location: ../View/LoggedInAccessible/LoggedInEvents.php');
