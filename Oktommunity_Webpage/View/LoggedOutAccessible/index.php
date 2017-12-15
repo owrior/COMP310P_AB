@@ -24,6 +24,33 @@
             <?php   include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
                     include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_upcoming.php'; ?>
         </div>
+        <div class="gallery">
+        <a target="_blank" href="fjords.jpg">
+    <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="forest.jpg">
+    <img src="forest.jpg" alt="Forest" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="lights.jpg">
+    <img src="lights.jpg" alt="Northern Lights" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="mountains.jpg">
+    <img src="mountains.jpg" alt="Mountains" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
     </body>
 </html>
 
