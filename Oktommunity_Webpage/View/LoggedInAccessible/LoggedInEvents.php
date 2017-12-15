@@ -23,6 +23,7 @@
                 <table class='events_page_main'>
                     <tr>
                         <td><label>Number :</label></td>
+                        <td><label>Buy Page :</label></td>
                         <td><label>Event ID :</label></td>
                         <td><label>Location ID :</label></td>
                         <td><label>Event Date :</label></td>
