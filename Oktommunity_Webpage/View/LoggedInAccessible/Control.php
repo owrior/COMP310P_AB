@@ -69,15 +69,26 @@
         $result = mysqli_query($connection,$event_query);
         while($row = mysqli_fetch_assoc($result)){
          //   echo '<table>';
+            
             echo '            <tr>
                 <td style = "width:200px"><b>Event Name</b></td>
                 <td style = "width:200px"><b>Event Date<b/></td>
                 <td style = "width:200px"><b>Location</b></td>
+                <td style = "width:200px"><b>ticket available</b></td>
             </tr><tr></tr>'
             
 ;            $name = $row[Event_Name];
             $Date = $row[Event_Date];
             $Event_ID = $row[Event_ID];
+            $capacity = $row[Event_Capacity];
+            
+            //get how many ticket left
+            $sale_ticket_query = "SELECT * FROM ticket WHERE Event_ID = '$Event_ID'";
+            $sale_result = mysqli_query($connection,$sale_ticket_query);
+            $count = mysqli_num_rows($sale_result);
+            $left = $capacity - $count;
+            
+            
             $Location = $row[Location_ID];
             $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
             $result2 = mysqli_query($connection,$location_query);
@@ -87,6 +98,7 @@
             echo '<td>'.$name.'</td>';
             echo '<td>'.$Date.'</td>';
             echo '<td>'.$locationName.'</td>';
+            echo '<td>'.$left.'</td>';
             echo'</tr>';
             
             
@@ -139,7 +151,7 @@
                 <td style = "width:200px"><b>Location</b></td>
             </tr><tr></tr>'
             
-;            $name = $row[Event_Name];
+;           $name = $row[Event_Name];
             $Date = $row[Event_Date];
             $Event_ID = $row[Event_ID];
             $Location = $row[Location_ID];
@@ -171,7 +183,11 @@
                 echo '<td>'.$row2['Customer_ID'].'</td>';
                 echo '<td>'.$row2['First_Name'].'</td>';
                 echo '<td>'.$row2['Last_Name'].'</td>';
+                
                 echo'</tr>';
+                
+
+                
             }
                 
             }}
