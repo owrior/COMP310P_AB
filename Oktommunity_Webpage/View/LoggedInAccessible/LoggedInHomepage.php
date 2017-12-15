@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<?php session_start();?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php'?>
 <html>
     <head>
         <title>Home Page</title>

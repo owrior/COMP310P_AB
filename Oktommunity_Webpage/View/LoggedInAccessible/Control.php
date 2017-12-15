@@ -1,4 +1,4 @@
-
+<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php'?>
 <?php 
     //require ('../Controller/connect.php');
         function connect(){
@@ -18,8 +18,6 @@
         mysqli_close($connection);
     }
     $connection = connect();
-
-    session_start();
 ?>
 <html>
     <head>
