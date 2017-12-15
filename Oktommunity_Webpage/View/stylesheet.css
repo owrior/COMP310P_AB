@@ -108,7 +108,7 @@
             div.main{
                 padding: 0px;
                 float:left;
-                height:100%;
+                height:50%;
                 width:84%; 
                 background-color: transparent;
             }
@@ -143,6 +143,26 @@
                 width: 30%;
                 font-style: normal;
             }
+            div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
             
             /*Login Page*/
             div.login_page_main{
