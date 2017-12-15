@@ -34,6 +34,7 @@
                         <td><label>Category :</label></td>
                     </tr>
                     <?php include('../Controller/event_search_display.php');?>
+                    
                 </table>
             </div>
          </div>
