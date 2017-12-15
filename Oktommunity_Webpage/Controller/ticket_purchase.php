@@ -13,6 +13,24 @@ function getUserID($email) {
     return $customer_ID;
 }
 
+function checkTickets($Event_ID) {
+    $connection = connect();
+    $event_capacity_query = "SELECT event.Event_Capacity FROM event WHERE event.Event_ID = ".$Event_ID;
+    $capacity_search = mysqli_query($connection,$event_capacity_query);
+    $capacity = mysqli_fetch_row($capacity_search);
+    
+    $tickets_purchased_query = "SELECT COUNT(ticket.Ticket_ID) FROM ticket WHERE ticket.Event_ID = ".$Event_ID;
+    $tickets_purchased_search = mysqli_query($connection,$tickets_purchased_query);
+    $tickets_purchased = mysqli_fetch_row($tickets_purchased_search);
+    if ($tickets_purchased == NULL) {
+        $tickets_purchased[0] = 0;
+    }
+    $remaining_tickets = $capacity[0] - $tickets_purchased[0];
+    
+    disconnect($connection);
+    return $remaining_tickets;
+}
+
 function buyTickets($customer_ID,$TiketType_ID,$event_ID) {
 
     $connection = connect();
@@ -23,7 +41,7 @@ function buyTickets($customer_ID,$TiketType_ID,$event_ID) {
 }
 
 if (!$_SESSION["email"]) {
-    header("/View/LoggedOutAccessible/Login");
+    header("../View/LoggedOutAccessible/Login");
 }
 
 else{
@@ -32,9 +50,15 @@ else{
     $event_ID = $_SESSION['event_ID'];
     $TiketType_ID = $_POST['ticket_type_ID'];
     $customer_ID = getUserID($email);
-    buyTickets($customer_ID,$TiketType_ID,$event_ID);
-    disconnect($connection);
+    $remaining_tickets = checkTickets($event_ID);
     
+    if ($remaining_tickets <= 0) {
+        echo "Sorry there are no tickets left for this event :(";
+    }
+    else {
+        buyTickets($customer_ID,$TiketType_ID,$event_ID);
+        disconnect($connection);
+    }
 }
 
 header('location: ../View/LoggedInAccessible/LoggedInHomepage.php');

@@ -5,7 +5,7 @@
                 font-family: Arial,sans-serif;
                 font-size: 15px;
                 line-height: 1.5;
-                color: white;
+                text-color: white;
                 background: transparent;
             }
             
@@ -359,8 +359,5 @@
                 margin: 0 auto;
             }
             /*Buy Page*/
-            div.main {
-                background: black;
-            }
             
 
