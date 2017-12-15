@@ -2,8 +2,8 @@
     
     function connect(){
             $dbhost = 'localhost';
-            $dbuser = 'root';
-            $dbpass = 'root';
+            $dbuser = 'hello';
+            $dbpass = 'world';
             $dbname = 'Oktoberfest';
             $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
             if (!$connection) {
