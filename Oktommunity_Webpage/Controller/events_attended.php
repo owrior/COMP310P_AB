@@ -36,12 +36,12 @@ elseif (mysqli_num_rows($results == 1)) {
             . 'WHERE ticket.ticket_ID='.$ticket_id;
     $event_name_search = mysqli_query($connection,$event_name_query);
     $event_name = mysqli_fetch_row($event_name_search);
-    echo '<ul>';
-            echo    '<li><form method = POST action = "/Controller/review_redirect_analysis.php">';
+    echo '<tr>';
+            echo    '<td><form method = POST action = "/Controller/review_redirect_analysis.php">';
                     echo '<input type = "hidden" name = "event_ID" value = "'.$event_ID.'">';
                     echo '<input type = "submit" value= "'.$event_name.'">';
-                    echo '</form></li>';
-    echo '</ul>';
+                    echo '</form></td>';
+    echo '</tr>';
 }
 disconnect($connection); 
 ?>
