@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image: url('/Images/Signup.JPG');  ">
+      
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
@@ -32,7 +33,7 @@
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
             </ul>
         </div>
-        <div class='main'style="background-image: url('/Images/Signup.JPG'); float: left; ">
+        <div class='main'>
         <h1 class="main">ABOUT US </h1>
         <p>Hello there, we here at Oktommunity are a platform on which you may either buy tickets to attend events or host your own! This is mainly for 
         Oktoberfest so then will be the hottest time to attend events however there are beer festivals all year round so come along fill up a stein and 

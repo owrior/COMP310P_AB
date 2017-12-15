@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image: url('/Images/token.JPG') ">
         <div class='login_control_dropdown'>
             <button class="login_control_btn"><?php 
             if ($_SESSION['email'] == NULL) {
@@ -31,7 +31,7 @@
                 <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
             </ul>
         </div>
-        <div class='tokens_page_main'style="background-image: url('/Images/token.JPG'); float: left; ">
+        <div class='tokens_page_main'>
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
             <div class="token_form">
                 <form method="post" action="/Controller/BuyTokens.php">

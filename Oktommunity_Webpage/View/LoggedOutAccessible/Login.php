@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image: url('https://ak0.picdn.net/shutterstock/videos/16207510/thumb/1.jpg')">
         <div class='login_control_dropdown'>
             <button class="login_control_btn">User</button>
             <div class = 'login_control_content'>
@@ -22,7 +22,7 @@
                 <li class='navigation_control'><a href='Events.php'>Events</a></li>
             </ul>
         </div>
-        <div class='login_page_main'style="background-image: url('/Images/Login.JPG')" >
+        <div class='login_page_main' >
         <h3 class="login_page_main">LOGIN</h3>
         <form method="POST" action="/Controller/Login_Validation.php" name="Login details validation">
             <label>E M A I L : </label><input type="text" name="email_entered" id="email_entered"><br>
