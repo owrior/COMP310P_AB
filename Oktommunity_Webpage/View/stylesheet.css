@@ -261,75 +261,13 @@
                 font-style: italic;
                 margin: 2px;
             }
-            div.events_1{
-              text-align: center;
-                height: 5cm;
-                width: 30.2cm;
-                background-color: blanchedalmond;
-                float: left; 
-                padding: 5% 2% 0% 2%;
-            }
-            h3.events_1{
-                font-size: 25px;
-                font-style: italic;
-                margin: 2px;
-            }
-             a:link, a:visited{
-                color: white;
-                text-align: center;
-
-                text-decoration: none;   
-            }
-             a:hover, a:active{
-                text-decoration: none;
-                background-color: #111;
-            }
-            div.events_2{
-              text-align: center;
-                height: 5cm;
-                width: 30.2cm;
-                background-color: blanchedalmond;
-                float: left; 
-                padding: 5% 2% 0% 2%;
-            }
-            h4.events_2{
-                font-size: 25px;
-                font-style: italic;
-                margin: 2px;
-            }
-             a:link, a:visited{
-                color: white;
-                text-align: center;
-
-                text-decoration: none;   
-            }
-             a:hover, a:active{
-                text-decoration: none;
-                background-color: #111;
-            }
-          
-            div.events_3{
-              text-align: center;
-                height: 5cm;
-                width: 30.2cm;
-                background-color: blanchedalmond;
-                float: left; 
-                padding: 5% 2% 0% 2%;
-            }
-            h5.events_3{
-                font-size: 25px;
-                font-style: italic;
-                margin: 2px;
-            }
-             a:link, a:visited{
-                color: white;
-                text-align: center;
-
-                text-decoration: none;   
-            }
-             a:hover, a:active{
-                text-decoration: none;
-                background-color: #111;
+            table.events_page_main {
+                border: 2;
+                width: 100%;
+                background-color: #84ed86;
+                color: #761a9b; 
+                margin: 0 auto;
+                padding: 5%;
             }
             /*Tokens Page*/
             div.tokens_page_main{

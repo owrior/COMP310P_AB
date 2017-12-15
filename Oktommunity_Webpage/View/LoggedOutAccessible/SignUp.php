@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<?php session_start()?>
+<?php session_start();
+      $_SESSION['email'] = 'Guest';
+?>
 <html>
     <head>
         <title>SIGN UP</title>

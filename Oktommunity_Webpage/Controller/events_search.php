@@ -11,7 +11,7 @@ require 'data_tester.php';
    $event_date_from = testData($_POST['event_date_from']);
    $event_date_to = testData($_POST['event_date_to']);
 
-if (!$_SESSION['email']) {
+if ($_SESSION['email'] == "User") {
     include '../View/LoggedOutAccessible/Events.php';
 }
 else {

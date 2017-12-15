@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php session_start();
       $_SESSION['email'] = 'Guest';
 ?>
@@ -10,7 +9,9 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body style="background-image: url('/Images/Signup.JPG'); ">
+        
         <?php include('logged_out_header.php')?>
+        
         <div class='main'>
         <h1 class="main">ABOUT US </h1>
         <p>Hello there, we here at Oktommunity are a platform on which you may either buy tickets to attend events or host your own! <br> This is mainly for 
