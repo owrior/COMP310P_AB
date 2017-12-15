@@ -359,6 +359,8 @@
                 margin: 0 auto;
             }
             /*Buy Page*/
-            
+            div.main {
+                background: black;
+            }
             
 

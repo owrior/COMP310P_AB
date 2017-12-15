@@ -56,8 +56,8 @@
         </div>
         
         <div class="eventCreation">
-            <label for="Category_ID">Category</label>
-            <select name="Category_ID">
+            <label for="Category">Category</label>
+            <select name="Category">
             <option value="0">Choose</option>
             <option value="1">Over 18 Only</option>
             <option value="2">Family Event</option>
@@ -67,8 +67,8 @@
         </div>
         
         <div class="eventCreation">
-            <label for="Supplier_ID">Supplier</label>
-            <select name="Supplier_ID">
+            <label for="Supplier">Supplier</label>
+            <select name="Supplier">
             <option value="0">Choose</option>
             <option value="1">Brewdog</option>
             <option value="2">Camden Town Brewery</option>
