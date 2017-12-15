@@ -59,7 +59,8 @@
          </div>
         <div class='events_page_sidebar_1'>
             <h2 class='events_page_sidebar_1'>Event's <br>You're Attending...</h2>
-            <?php include '../Controller/events_attending.php'; ?>
+            <?php   include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
+                    include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_attending.php'; ?>
         </div>
         <div class="events_page_sidebar_2">
             <h2 class="events_page_sidebar_2">Give Feedback On Event's You've Attended...</h2>

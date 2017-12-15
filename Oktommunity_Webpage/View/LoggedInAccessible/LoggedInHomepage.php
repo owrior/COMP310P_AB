@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php session_start()?>
+<?php session_start();?>
 <html>
     <head>
         <title>Home Page</title>
@@ -41,10 +41,15 @@
         </div>
         <div class='sidebar'>
         <h2 class="sidebar">WHAT'S<br/> ON?</h2>
-        <form action="/Controller/events_attending.php">
+        <!--<form action="/Controller/events_attending.php">
+            
             <input type="submit">
-        </form>
-        <?php include '../Controller/events_attending.php'?>
+        </form>-->
+        <?php
+              ini_set('display',1);
+              include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
+              include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_attending.php'?>
+        
         </div>
     </body>
 </html>
