@@ -40,6 +40,18 @@ function buyTickets($customer_ID,$TiketType_ID,$event_ID) {
     return $purchase_query;
 }
 
+function sendEmail($email, $event_ID) {
+    $connection = connect();
+    $event_name_query = "SELECT event.Event_Name FROM event WHERE event.Event_ID = ".$event_ID;
+    $event_name_search = mysqli_query($connection,$event_name_query);
+    $event_name = mysqli_fetch_row($event_name_search);
+    $subject = "Confirmation of Purchase for : ".$event_name[0];
+    $message = "Hello thank you for purchasing tickets for ".$event_name[0]." from Oktommunity!!!!";
+    mail($email, $subject, $message);
+    disconnect($connection);
+    
+}
+
 if (!$_SESSION["email"]) {
     header("../View/LoggedOutAccessible/Login");
 }
@@ -57,6 +69,7 @@ else{
     }
     else {
         buyTickets($customer_ID,$TiketType_ID,$event_ID);
+        sendEmail($email, $event_ID);
         disconnect($connection);
     }
 }
