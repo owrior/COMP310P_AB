@@ -401,17 +401,20 @@
                 text-align: center;
                 font-style: normal;
             }
+   
+            
             div.eventHosting{
+             
              margin: 0 auto;  
              text-align: center;
                 font-style: italic;
-                font-size: 15px;   
+                font-size: 25px;   
             }
             div.eventHosted{
              margin: 0 auto;  
              text-align: center;
              font-style: italic;
-             font-size: 15px;   
+             font-size: 25px;   
             }            
             table{
                 margin: 0 auto;
