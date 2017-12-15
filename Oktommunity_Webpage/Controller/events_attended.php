@@ -37,7 +37,10 @@ else {
     $event_name_search = mysqli_query($connection,$event_name_query);
     $event_name = mysqli_fetch_row($event_name_search);
     echo '<ul>';
-        echo '<li><'.$event_name[0].'</li>';
+            echo    '<li><form method = POST action = "/Controller/ticket_redirect_analysis.php">';
+                    echo '<input type = "hidden" name = "event_ID" value = "'.$event_ID.'">';
+                    echo '<input type = "submit" value= "BUY">';
+                    echo '</form></li>';
     echo '</ul>';
 }
 disconnect($connection); 
