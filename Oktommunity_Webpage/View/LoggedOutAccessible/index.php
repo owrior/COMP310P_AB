@@ -25,32 +25,44 @@
                     include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_upcoming.php'; ?>
         </div>
         <div class="gallery">
-        <a target="_blank" href="fjords.jpg">
-    <img src="fjords.jpg" alt="Fjords" width="300" height="200">
+        <a target="_blank" href="https://d49r1np2lhhxv.cloudfront.net/www/photos/FreeFestival2017_V1.jpg">
+            <img src="https://d49r1np2lhhxv.cloudfront.net/www/photos/FreeFestival2017_V1.jpg"  width="500" height="200">
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="forest.jpg">
-    <img src="forest.jpg" alt="Forest" width="300" height="200">
+  <a target="_blank" href="http://tong.visitkorea.or.kr/cms/resource_etc/89/2478889_image_27.jpg">
+    <img src="http://tong.visitkorea.or.kr/cms/resource_etc/89/2478889_image_27.jpg"  width="500" height="200">
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="lights.jpg">
-    <img src="lights.jpg" alt="Northern Lights" width="300" height="200">
+  <a target="_blank" href="https://media.timeout.com/images/103146122/image.jpg">
+    <img src="https://media.timeout.com/images/103146122/image.jpg"  width="500" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+        <div class="gallery">
+  <a target="_blank" href="http://www.kefken.org/wp-content/uploads/2016/03/summer_breeze_concert_long_beach.jpg">
+    <img src="http://www.kefken.org/wp-content/uploads/2016/03/summer_breeze_concert_long_beach.jpg"  width="500" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+                <div class="gallery">
+  <a target="_blank" href="https://eng.taiwan.net.tw/userfiles/image/2016photo_en/2016_p01.jpg">
+    <img src="https://eng.taiwan.net.tw/userfiles/image/2016photo_en/2016_p01.jpg"  width="500" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+                <div class="gallery">
+  <a target="_blank" href="http://www.festivalrepublic.com/sites/live.inviqa.festivalrepublic.com/files/images/news/2017_readingfestival_jenoneill_0178_2.jpg">
+    <img src="http://www.festivalrepublic.com/sites/live.inviqa.festivalrepublic.com/files/images/news/2017_readingfestival_jenoneill_0178_2.jpg"  width="500" height="200">
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
 
-<div class="gallery">
-  <a target="_blank" href="mountains.jpg">
-    <img src="mountains.jpg" alt="Mountains" width="300" height="200">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
     </body>
 </html>
 
