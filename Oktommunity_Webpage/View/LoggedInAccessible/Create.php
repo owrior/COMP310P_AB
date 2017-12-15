@@ -70,9 +70,25 @@
             <label for="Supplier">Supplier</label>
             <select name="Supplier">
             <option value="0">Choose</option>
-            <option value="1">Brewdog</option>
-            <option value="2">Camden Town Brewery</option>
-            <option value="3">Chinz</option>
+            <?php 
+             $connection = connect();
+            $supplier_query = "select * from supplier ";                  
+            $sup_list = mysqli_query($connection,$supplier_query);
+            while($row2 = mysqli_fetch_assoc($sup_list)){
+                
+                $value = $row2['Supplier_ID'];
+                
+                $name = $row2['Name'];
+            ?>   <option value="<?php
+            
+            echo $value;
+             ?>"><?php
+             echo $name;
+              ?></option><?php
+ 
+            }
+                 
+            ?>  
             </select>
         </div>
 
