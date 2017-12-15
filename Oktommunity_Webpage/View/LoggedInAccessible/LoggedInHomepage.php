@@ -40,11 +40,7 @@
         enjoy!!!</p>
         </div>
         <div class='sidebar'>
-        <h2 class="sidebar">WHAT'S<br/> ON?</h2>
-        <!--<form action="/Controller/events_attending.php">
-            
-            <input type="submit">
-        </form>-->
+            <h2 class="sidebar">Event's<br/>You've</br>Booked</h2>
         <?php
               ini_set('display',1);
               include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
