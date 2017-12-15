@@ -5,8 +5,9 @@
             $dbhost = 'localhost';
             $dbuser = 'root';
             $dbpass = 'root';
-            $dbname = 'Oktoberfest';
-            $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+            $dbname = 'oktober';
+            $dbport = '8889';
+            $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
             if (!$connection) {
                 die('Error connecting to MySQL server.'.mysql_error());
             }
@@ -58,20 +59,25 @@
         <div class ="eventHosting">
             <h>EVENTS YOU ARE HOSTING</h>
             <table>
-            <tr>
-                <td style = "width:100px">Event Name</td>
-                <td style = "width:100px">Event Date</td>
-                <td style = "width:100px">Location</td>
-            </tr>
+
+           
+            
             <?php 
             if(1==1){
                 $OwnerID = $_SESSION['loginID'];
-             $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID'";
+             $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID' and Event_Date >= now()";
         $result = mysqli_query($connection,$event_query);
         while($row = mysqli_fetch_assoc($result)){
+         //   echo '<table>';
+            echo '            <tr>
+                <td style = "width:200px"><b>Event Name</b></td>
+                <td style = "width:200px"><b>Event Date<b/></td>
+                <td style = "width:200px"><b>Location</b></td>
+            </tr><tr></tr>'
             
-            $name = $row[Event_Name];
+;            $name = $row[Event_Name];
             $Date = $row[Event_Date];
+            $Event_ID = $row[Event_ID];
             $Location = $row[Location_ID];
             $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
             $result2 = mysqli_query($connection,$location_query);
@@ -82,31 +88,60 @@
             echo '<td>'.$Date.'</td>';
             echo '<td>'.$locationName.'</td>';
             echo'</tr>';
-            }}
-            ?>
-            </table>
+            
+            
+             $event_query = "SELECT DISTINCT customer.Customer_ID, customer.First_Name, customer.Last_Name FROM customer JOIN ticket ON customer.Customer_ID = ticket.Customer_ID WHERE ticket.Event_ID='$Event_ID'";
+            $member_list = mysqli_query($connection,$event_query);
+            $count = mysqli_num_rows($member_list);
+            //if(count>0)
+            $render =0;
+            while($row2 = mysqli_fetch_assoc($member_list)){
+                       if($render ==0)     {echo '
+            <tr>
+                <td style = "width:200px"><b>Customer ID</b></td>
+                <td style = "width:200px"><b>First Name</b></td>
+                <td style = "width:200px"><b>Last Name</b></td>
+            </tr>';
+            $render =1;}
+                echo '<tr>';
+                echo '<td>'.$row2['Customer_ID'].'</td>';
+                echo '<td>'.$row2['First_Name'].'</td>';
+                echo '<td>'.$row2['Last_Name'].'</td>';
+                echo'</tr>';
+            }
                 
+            }}
+                echo'</table>';   
+            ?>
             
                 
         </div>
+
+        <br> <br>
+        
         
         <div class ="eventHosted">
             <h>EVENTS YOU HOSTED IN THE PAST</h>
-            <table>
-            <tr>
-                <td style = "width:100px">Event Name</td>
-                <td style = "width:100px">Event Date</td>
-                <td style = "width:100px">Location</td>
-            </tr>
+             <table>
+
+           
+            
             <?php 
             if(1==1){
                 $OwnerID = $_SESSION['loginID'];
-             $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID'";
+             $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID' and Event_Date < now()";
         $result = mysqli_query($connection,$event_query);
         while($row = mysqli_fetch_assoc($result)){
+         //   echo '<table>';
+            echo '            <tr>
+                <td style = "width:200px"><b>Event Name</b></td>
+                <td style = "width:200px"><b>Event Date<b/></td>
+                <td style = "width:200px"><b>Location</b></td>
+            </tr><tr></tr>'
             
-            $name = $row[Event_Name];
+;            $name = $row[Event_Name];
             $Date = $row[Event_Date];
+            $Event_ID = $row[Event_ID];
             $Location = $row[Location_ID];
             $location_query = "SELECT * FROM location WHERE Location_ID ='$Location' ";
             $result2 = mysqli_query($connection,$location_query);
@@ -117,10 +152,31 @@
             echo '<td>'.$Date.'</td>';
             echo '<td>'.$locationName.'</td>';
             echo'</tr>';
-            }}
-            ?>
-            </table>
+            
+            
+             $event_query = "SELECT DISTINCT customer.Customer_ID, customer.First_Name, customer.Last_Name FROM customer JOIN ticket ON customer.Customer_ID = ticket.Customer_ID WHERE ticket.Event_ID='$Event_ID'";
+            $member_list = mysqli_query($connection,$event_query);
+            $count = mysqli_num_rows($member_list);
+            //if(count>0)
+            $render =0;
+            while($row2 = mysqli_fetch_assoc($member_list)){
+                       if($render ==0)     {echo '
+            <tr>
+                <td style = "width:200px"><b>Customer ID</b></td>
+                <td style = "width:200px"><b>First Name</b></td>
+                <td style = "width:200px"><b>Last Name</b></td>
+            </tr>';
+            $render =1;}
+                echo '<tr>';
+                echo '<td>'.$row2['Customer_ID'].'</td>';
+                echo '<td>'.$row2['First_Name'].'</td>';
+                echo '<td>'.$row2['Last_Name'].'</td>';
+                echo'</tr>';
+            }
                 
+            }}
+                echo'</table>';   
+            ?>               
             
                 
         </div>
