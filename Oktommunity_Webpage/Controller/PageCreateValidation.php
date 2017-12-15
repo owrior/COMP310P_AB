@@ -33,12 +33,6 @@ session_start();
             echo $result;
             }
         else{
-            //$Email = $SESSION['email'];
-            //$findIDsql = "SELECT * FROM customer WHERE Email = '$Email'";
-            //$res = mysqli_query($connnection, $findIDsql);
-            //$row =  $result->fetch_assoc();
-            //$id = $row['Customer_ID'];
-            //$printf('id is '.$id);
             $OwnerID = $_SESSION['loginID'];
             if(!OwnerID |empty($OwnerID) )echo 'nothing here';
             echo $OwnerID;
@@ -50,10 +44,22 @@ session_start();
             $Description = $_POST['Description'];
             $Supplier = $_POST['Supplier'];
             $Category = $_POST ['Category'];
-            //$OwenerID = $SESSION[''];
-            $query="INSERT INTO event (Event_Name, Location_ID, Event_Date, TicketSaleEnd_Date, Event_Capacity, Description, Category, Supplier,OwnerID) VALUES 
-                    ('$Event_Name', '$Location_ID','$Event_Date', '$TicketSaleEnd_Date', '$Event_Capacity', '$Description','$Category','$Supplier','$OwnerID')";
-            mysqli_query($connection, $query);
+
+            $insert_query="INSERT INTO event (Event_Name, Location_ID, Event_Date, TicketSaleEnd_Date, Event_Capacity, Description, Supplier,OwnerID) VALUES 
+                    ('$Event_Name', '$Location_ID','$Event_Date', '$TicketSaleEnd_Date', '$Event_Capacity', '$Description','$Supplier','$OwnerID')";
+            mysqli_query($connection, $insert_query);
+            
+            $search_query ="SELECT categories.Category_ID, event.Event_ID FROM categories "
+                    . "JOIN CategoryEvent ON categories.Category_ID = CategoryEvent.Category_ID "
+                    . "JOIN event ON CategoryEvent.Event_ID = event.Event_ID "
+                    . "WHERE event.Event_Name = '".$Event_Name."'";
+            $results = mysqli_query($connection,$search_query);
+            $row = mysqli_fetch_row($results);
+            $Category_ID = $row['Category_ID'];
+            $Event_ID = $row['Event_ID'];
+            var_dump($search_query);
+            $insert_query_2="INSERT INTO CategoryEvent (Category_ID, Event_ID) VALUES ('$Category_ID','$Event_ID')";
+            mysqli_query($connection,$insert_query_2);
             header('location: /View/LoggedInAccessible/Control.php');
         }
 }
