@@ -1,24 +1,5 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php'?>
-<?php 
-    //require ('../Controller/connect.php');
-        function connect(){
-            $dbhost = 'localhost';
-            $dbuser = 'root';
-            $dbpass = 'root';
-            $dbname = 'oktoberfest';
-            $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-            if (!$connection) {
-                die('Error connecting to MySQL server.'.mysql_error());
-            }
-            else {
-                return $connection;
-            }
-    }    
-    function disconnect($connection) {
-        mysqli_close($connection);
-    }
-    $connection = connect();
-?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/Controller/login_check.php';
+      include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php' ?>
 <html>
     <head>
         <title>CONTROL</title>
@@ -37,13 +18,13 @@
 
            
             
-            <?php 
+            <?php $connection = connect();
             if(1==1){
                 $OwnerID = $_SESSION['loginID'];
                 $event_query = "SELECT * FROM event WHERE OwnerID = '$OwnerID' and Event_Date >= now()";
-        $result = mysqli_query($connection,$event_query);
-        while($row = mysqli_fetch_assoc($result)){
-         //   echo '<table>';
+                $result = mysqli_query($connection,$event_query);
+                while($row = mysqli_fetch_assoc($result)){
+                 //   echo '<table>';
             
             echo '            <tr>
                 <td style = "width:200px"><b>Event Name</b></td>
