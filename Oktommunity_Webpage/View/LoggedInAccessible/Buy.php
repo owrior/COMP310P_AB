@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
-    <body>
+    <body style="background-image:url('https://ak8.picdn.net/shutterstock/videos/16944148/thumb/1.jpg?i10c=img.resize(height:160)')">
         <?php include('logged_in_navigation.php');?>
-        <div class="main">
+        <div class="buy_page">
             <?php include('../Controller/ticket_info.php');?>
             <form method="POST"  action="ticket_purchase.php">
                 <select name = "ticket_type_ID">

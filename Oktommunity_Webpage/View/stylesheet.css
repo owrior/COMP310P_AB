@@ -5,7 +5,7 @@
                 font-family: Arial,sans-serif;
                 font-size: 15px;
                 line-height: 1.5;
-                text-color: white;
+                color: white;
                 background: transparent;
             }
             
@@ -264,12 +264,13 @@
             table.events_page_main {
                 border: 2;
                 width: 1000px;
-                background-color: #84ed86;
-                color: #761a9b; 
+                background-color: transparent;
+                color: white; 
                 margin: 0px auto;
                 padding: 5%;
                 display: block;
             }
+           
             /*Tokens Page*/
             div.tokens_page_main{
                 padding: 0px;
@@ -357,7 +358,20 @@
             }            
             table{
                 margin: 0 auto;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid white;
             }
             /*Buy Page*/
+            div.buy_page{
+            text-align: center;
+                height:100%;
+                width:100%; 
+                background-color: transparent;
+                float: left;
+                padding-top:  20px;    
+                border: 1px solid white;
+            }
             
 
