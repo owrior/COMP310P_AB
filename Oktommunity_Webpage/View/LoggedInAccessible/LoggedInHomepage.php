@@ -14,13 +14,18 @@
         Oktoberfest so then will be the hottest time to attend events however there are beer festivals all year round so come along fill up a stein and 
         enjoy!!!</p>
         </div>
-        <div class='sidebar'>
-            <h2 class="sidebar">Event's<br/>You've</br>Booked</h2>
-        <?php
-              ini_set('display',1);
-              include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
-              include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_attending.php'?>
+        <div class='sidebar_1'>
+            <h2 class="sidebar_1">Event's<br/>You've</br>Booked</h2>
+            <?php
+                  ini_set('display',1);
+                  include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
+                  include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_attending.php'?>
         
+        </div>
+        <div class="events_page_sidebar_2">
+            <h2 class="events_page_sidebar_2">Please give</br>feedback!!!</h2>
+            <?php
+                include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_attended.php'?>
         </div>
     </body>
 </html>

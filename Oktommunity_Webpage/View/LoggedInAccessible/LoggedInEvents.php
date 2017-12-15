@@ -22,8 +22,9 @@
             <div class='events_page_results'>
                 <table class='events_page_main'>
                     <tr>
-                        <td><label>Number :</label></td>
+                        <td><label>Purchase :</label></td>
                         <td><label>Event ID :</label></td>
+                        <td><label>Event Name :</label></td>
                         <td><label>Location ID :</label></td>
                         <td><label>Event Date :</label></td>
                         <td><label>Ticket Sale final release :</label></td>
