@@ -36,6 +36,13 @@ $connection = connect();
             $query="INSERT INTO supplier (Name, Type, Email, Phone_Number, Address, Postcode) VALUES 
                     ('$Name', '$Type','$Email', '$Phone_Number', '$Address','$Postcode')";
             mysqli_query($connection, $query);
-            header('location: /View/LoggedInAccessible/ControlSupplier.php');
+            $_SESSION['create_state'] = 'success';
+            if($_SESSION['create_state'] == 'success'){
+                echo '<script>alert("New supplier detailed added to database")</script>';
+            }
+            //header('location: ../View/LoggedInAccessible/Create.php');
+            echo '<script>setTimeout(function() {
+  window.location.href = "../View/LoggedInAccessible/Create.php";
+}, 1000);</script>';
         }
 	}
