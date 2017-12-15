@@ -15,9 +15,6 @@
         <div class ="eventHosting">
             <h>EVENTS YOU ARE HOSTING</h>
             <table>
-
-           
-            
             <?php $connection = connect();
             if(1==1){
                 $OwnerID = $_SESSION['loginID'];

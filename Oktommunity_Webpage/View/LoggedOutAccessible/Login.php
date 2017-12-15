@@ -1,5 +1,5 @@
 <?php session_start();
-      $_SESSION['email'] = 'Guest';
+      $_SESSION['email'] = 'User';
 ?>
 <html>
     <head>

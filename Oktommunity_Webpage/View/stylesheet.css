@@ -263,11 +263,12 @@
             }
             table.events_page_main {
                 border: 2;
-                width: 100%;
+                width: 1000px;
                 background-color: #84ed86;
                 color: #761a9b; 
-                margin: 0 auto;
+                margin: 0px auto;
                 padding: 5%;
+                display: block;
             }
             /*Tokens Page*/
             div.tokens_page_main{

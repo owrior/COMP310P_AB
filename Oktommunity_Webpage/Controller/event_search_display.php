@@ -35,9 +35,9 @@ if ($event_name == '') {
    }
 
     $event_search_query = "SELECT DISTINCT Event.Event_ID, Event_Name, Location_ID, Event_Date, TicketSaleEnd_Date, Event_Capacity, Categories.Category_Name FROM Event "
-            . "JOIN CategoryEvent ON Event.Event_ID"
-            . " JOIN Categories ON CategoryEvent.Category_ID"
-            . " WHERE $event_name_query $date_query $category_query";
+            . "JOIN CategoryEvent ON Event.Event_ID = CategoryEvent.Event_ID "
+            . "JOIN Categories ON CategoryEvent.Category_ID = Categories.Category_ID "
+            . "WHERE $event_name_query $date_query $category_query";
     $results  = mysqli_query($connection, $event_search_query);
     
     $count = 1;
