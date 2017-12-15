@@ -8,30 +8,8 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body style="background-image:url('https://ak8.picdn.net/shutterstock/videos/16944148/thumb/1.jpg?i10c=img.resize(height:160)')">
-        <div class='login_control_dropdown'>
-            <button class="login_control_btn"><?php 
-            if ($_SESSION['email'] == NULL) {
-                echo 'User';
-            }
-            else {
-                echo $_SESSION['email'];
-            }
-            ?></button>
-            <div class = 'login_control_content'>
-                <a href='/Controller/LogOut.php'>Log Out</a>
-            </div>
-        </div>
-        <br>
-        <div class='navigation_control'>
-            <ul class='navigation_control'>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/LoggedInHomepage.php'>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/LoggedInEvents.php'>Events</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Tokens.php'>Tokens</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Create.php'>Create</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
-            </ul>
-        </div>
-         <div class='events_page_main' >
+        <?php include('logged_in_navigation.php');?>
+        <div class='events_page_main' >
             <h1 class="events_page_main">WHAT'S ON?</h1>
             <div class='events_page_search'>
                 <form class='events_page_main' method = 'post' action='/Controller/events_search.php'>

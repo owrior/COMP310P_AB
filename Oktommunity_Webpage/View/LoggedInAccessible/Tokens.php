@@ -8,29 +8,7 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body style="background-image: url('/Images/token.JPG') ">
-        <div class='login_control_dropdown'>
-            <button class="login_control_btn"><?php 
-            if ($_SESSION['email'] == NULL) {
-                header('location: /LoggedOutAccessible/Login.php');
-            }
-            else {
-                echo $_SESSION['email'];
-            }
-            ?></button>
-            <div class = 'login_control_content'>
-                <a href='/Controller/LogOut.php'>Log Out</a>
-            </div>
-        </div>
-        <br>
-        <div class='navigation_control'>
-            <ul class='navigation_control'>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/LoggedInHomepage.php'>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/LoggedInEvents.php'>Events</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Tokens.php'>Tokens</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Create.php'>Create</a></li>
-                <li class='navigation_control'><a href='/View/LoggedInAccessible/Control.php'>Control</a></li>
-            </ul>
-        </div>
+        <?php include('logged_in_navigation.php');?>
         <div class='tokens_page_main'>
             <h3 class="tokens_page_main">TOKENS! TOKENS! TOKENS!</h3>
             <div class="token_form">

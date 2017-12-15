@@ -9,30 +9,7 @@
         <link rel='stylesheet' href='/View/stylesheet.css'>
     </head>
     <body style="background-image:url('http://blog.sklambert.com/wp-content/uploads/2012/09/bg.png')">
-        <div class='login_control_dropdown'>
-            <button class="login_control_btn"><?php 
-            if ($_SESSION['email'] == NULL) {
-                echo 'User';
-            }
-            else {
-                 //$SESSION['loginID'] = 2;
-                echo $_SESSION['email'].'id is '.$_SESSION['loginID'];
-            }
-            ?></button>
-            <div class = 'login_control_content'>
-                <a href='/Controller/LogOut.php'>Log Out</a>
-            </div>
-        </div>
-        <br>
-        <div class='navigation_control'>
-            <ul class='navigation_control'>
-                <li class='navigation_control'><a href=LoggedInHomepage.php>OKTOMUNITY</a></li>
-                <li class='navigation_control'><a href=LoggedInEvents.php>Events</a></li>
-                <li class='navigation_control'><a href=Tokens.php>Tokens</a></li>
-                <li class='navigation_control'><a href=Create.php>Create</a></li>
-                <li class='navigation_control'><a href=Control.php>Control</a></li>
-            </ul>
-        </div>
+        <?php include('logged_in_navigation.php');?>
         <div class='create_page_main'>
             <h3 class="create_page_main">CREATE</h3>
         
