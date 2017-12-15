@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1);
+//ini_set('display_errors',1);
 $email = $_SESSION['email'];
 $connection = connect();
 $ticket_id_query = 'SELECT DISTINCT ticket.ticket_ID FROM ticket '
@@ -9,7 +9,7 @@ $ticket_id_query = 'SELECT DISTINCT ticket.ticket_ID FROM ticket '
 $results = mysqli_query($connection, $ticket_id_query);
 
 if (mysqli_num_rows($results) == NULL) {
-    //echo "You need to book some events!!!";
+    echo "No event's attended!!!";
 }
 if (mysqli_num_rows($results) > 1) {
     while ($row = mysqli_fetch_assoc($results)) {
@@ -27,7 +27,7 @@ if (mysqli_num_rows($results) > 1) {
     echo '</ul>';
     }
 }
-else {
+elseif (mysqli_num_rows($results == 1)) {
     
     $row = mysqli_fetch_row($results);
     $ticket_id = $row[0];
@@ -37,7 +37,10 @@ else {
     $event_name_search = mysqli_query($connection,$event_name_query);
     $event_name = mysqli_fetch_row($event_name_search);
     echo '<ul>';
-        echo '<li><'.$event_name[0].'</li>';
+            echo    '<li><form method = POST action = "/Controller/review_redirect_analysis.php">';
+                    echo '<input type = "hidden" name = "event_ID" value = "'.$event_ID.'">';
+                    echo '<input type = "submit" value= "'.$event_name.'">';
+                    echo '</form></li>';
     echo '</ul>';
 }
 disconnect($connection); 

@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors',1);
 $email = $_SESSION['email'];
 $connection = connect();
 $ticket_id_query = 'SELECT DISTINCT ticket.ticket_ID FROM ticket '

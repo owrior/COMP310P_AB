@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
     include 'connect.php';
     include 'data_tester.php';
     $connection = connect();
@@ -9,5 +9,6 @@
     }
     else {
     $event_ID = $_POST['event_ID'];
-        include '../View/LoggedInAccessible/Buy.php';
+        include '../View/LoggedInAccessible/Review.php';
     }
+
