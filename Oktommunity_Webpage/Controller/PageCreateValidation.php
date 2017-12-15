@@ -54,6 +54,6 @@ session_start();
             $query="INSERT INTO event (Event_Name, Location_ID, Event_Date, TicketSaleEnd_Date, Event_Capacity, Description, Category, Supplier,OwnerID) VALUES 
                     ('$Event_Name', '$Location_ID','$Event_Date', '$TicketSaleEnd_Date', '$Event_Capacity', '$Description','$Category','$Supplier','$OwnerID')";
             mysqli_query($connection, $query);
-            //header('location: /View/LoggedInAccessible/Control.php');
+            header('location: /View/LoggedInAccessible/Control.php');
         }
 }
