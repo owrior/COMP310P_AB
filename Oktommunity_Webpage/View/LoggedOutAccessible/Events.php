@@ -37,18 +37,6 @@
                 </table>
             </div>
          </div>
-        <div class='events_page_sidebar_1'>
-            <h2 class='events_page_sidebar_1'>Upcoming Event's</h2>
-            <ul>
-                <li>Event 1</li>
-                <li>Event 2</li>
-                <li>Event 3</li>
-                <li>Event 4</li>
-            </ul>
-        </div>
-        <div class="events_page_sidebar_2">
-            <h2 class="events_page_sidebar_2">Give Feedback On Event's You've Attended...</h2>
-        </div>
-        
     </body>
 </html>
+

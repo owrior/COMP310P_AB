@@ -270,6 +270,7 @@
                 padding: 5%;
                 display: block;
             }
+            
            
             /*Tokens Page*/
             div.tokens_page_main{
@@ -371,7 +372,7 @@
                 background-color: transparent;
                 float: left;
                 padding-top:  20px;    
-                border: 1px solid white;
+                
             }
             
 

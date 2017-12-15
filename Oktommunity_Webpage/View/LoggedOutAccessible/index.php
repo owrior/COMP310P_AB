@@ -20,12 +20,9 @@
       
         </div>
         <div class='sidebar'>
-        <h2 class="sidebar">WHAT'S<br/> ON?</h2>
-        <ul>
-            <li>Event 1</li>
-            <li>Event 2</li>
-            <li>Event 3</li>
-        </ul>
+            <h2 class='sidebar'>WHAT's <br>ON?</h2>
+            <?php   include $_SERVER['DOCUMENT_ROOT'].'/Controller/connect.php';
+                    include $_SERVER['DOCUMENT_ROOT'].'/Controller/events_upcoming.php'; ?>
         </div>
     </body>
 </html>
